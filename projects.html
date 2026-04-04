@@ -1,220 +1,1028 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
 
-<!-- Identity Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Person",
- "name": "Ahmed Qureshi",
- "url": "https://ahmed-qureshi-three.vercel.app/",
- "jobTitle": "Frontend Developer"
-}
-</script>
+    <!-- Identity Schema -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "Person",
+     "name": "Ahmed Qureshi",
+     "url": "https://ahmed-qureshi-three.vercel.app/",
+     "jobTitle": "Frontend Developer"
+    }
+    </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="NBgBzjwRHLuES79UhDmXlXCkKY5wAQf0gkdj4QayJTo" />
+    <meta name="google-site-verification" content="NBgBzjwRHLuES79UhDmXlXCkKY5wAQf0gkdj4QayJTo" />
 
-<title>Ahmed Qureeshi | Projects</title>
+    <title>Ahmed Qureshi | Projects</title>
 
-<meta name="description" content="Explore projects created by Ahmed Qureshi, a Frontend Developer skilled in React JS, HTML, CSS, JavaScript, and Bootstrap.">
+    <meta name="description" content="Explore projects created by Ahmed Qureshi, a Frontend Developer skilled in React JS, HTML, CSS, JavaScript, and Bootstrap.">
+    <meta name="keywords" content="Ahmed Qureshi Projects, Frontend Developer Portfolio, React Projects, Web Developer Work">
+    <meta name="robots" content="index, follow">
 
-<meta name="keywords" content="Ahmed Qureshi Projects, Frontend Developer Portfolio, React Projects, Web Developer Work">
+    <link rel="canonical" href="https://ahmed-qureshi-three.vercel.app/projects.html">
 
-<meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ahmed Qureshi | Projects">
+    <meta property="og:description" content="Frontend development projects in HTML, CSS, JavaScript & React">
+    <meta property="og:url" content="https://ahmed-qureshi-three.vercel.app/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ahmed-qureshi-three.vercel.app/me.png">
 
-<!-- FIXED Canonical -->
-<link rel="canonical" href="https://ahmed-qureshi-three.vercel.app/projects.html">
+    <!-- Favicon -->
+    <link rel="icon" href="/fav.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/fav.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/fav.ico">
+    <link rel="icon" sizes="192x192" href="/fav.ico">
+    <link rel="icon" sizes="512x512" href="/fav.ico">
+    <meta name="msapplication-TileImage" content="/fav.ico">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Ahmed Qureshi | Projects">
-<meta property="og:description" content="Frontend development projects in HTML, CSS, JavaScript & React">
-<meta property="og:url" content="https://ahmed-qureshi-three.vercel.app/projects.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://ahmed-qureshi-three.vercel.app/me.png">
+    <meta name="theme-color" content="#000000">
 
-<!-- Favicon -->
-<link rel="icon" href="/fav.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/fav.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="/fav.ico">
-<link rel="icon" sizes="192x192" href="/fav.ico">
-<link rel="icon" sizes="512x512" href="/fav.ico">
-<meta name="msapplication-TileImage" content="/fav.ico">
+    <!-- Dark mode init (before render to avoid flash) -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 
-<meta name="theme-color" content="#000000">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="projects.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                fontFamily: {
+                    sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    display: ['"Space Grotesk"', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#4f46e5',
+                        dark: '#050505',
+                        surface: '#0a0a0a',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+                        'spin-slow': 'spin 15s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)', filter: 'blur(8px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+
+        .bg-grid-pattern {
+            background-image:
+                linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            filter: blur(6px);
+            transition: opacity .7s ease, transform .7s ease, filter .7s ease;
+        }
+        .reveal.visible { opacity: 1; transform: none; filter: none; }
+        .reveal.delay-100 { transition-delay: .1s; }
+        .reveal.delay-200 { transition-delay: .2s; }
+        .reveal.delay-300 { transition-delay: .3s; }
+
+        .project-card-wrap {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+            cursor: pointer;
+        }
+        .project-card-wrap:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px rgba(37,99,235,.22);
+        }
+        .project-card-wrap::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--x,50%) var(--y,50%), rgba(37,99,235,.12), transparent 60%);
+            opacity: 0;
+            transition: opacity .4s;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .project-card-wrap:hover::before { opacity: 1; }
+
+        .browser-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0 12px;
+            height: 26px;
+            background: #1e1e1e;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            flex-shrink: 0;
+        }
+        .browser-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .dot-r { background: #ff5f57; }
+        .dot-y { background: #febc2e; }
+        .dot-g { background: #28c840; }
+        .url-pill { flex: 1; height: 11px; border-radius: 4px; background: rgba(255,255,255,0.08); margin: 0 8px; }
+
+        .card-img-wrap {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background: #0d1117;
+            overflow: hidden;
+        }
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+        }
+        .project-card-wrap:hover .card-img-wrap img { transform: scale(1.06); }
+        .card-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(10,10,10,0.7) 100%);
+            pointer-events: none;
+        }
+
+        .img-hover-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(37,99,235,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity .3s;
+            z-index: 2;
+        }
+        .project-card-wrap:hover .img-hover-overlay { opacity: 1; }
+
+        .filter-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .05em;
+            background: rgba(37,99,235,.12);
+            color: #2563eb;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #2563eb, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .noise-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: .03;
+            mix-blend-mode: overlay;
+        }
+
+        .project-item.hidden-filter { display: none; }
+
+        #project-modal { display: none; }
+        #project-modal.open { display: flex; }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #2563eb44; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563eb99; }
+    </style>
+
+    <!-- Your existing stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
-        <header id="navbar">
-        <nav class="nav-container animate-on-scroll slide-in-top">
-            <div class="logo">
-                Ahmed-Qureshi<span class="logo-accent">-Dev</span>
+
+<body class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 overflow-x-hidden font-sans">
+
+    <!-- Noise + Grid -->
+    <div class="fixed inset-0 z-[1] noise-overlay pointer-events-none"></div>
+    <div class="fixed inset-0 z-0 bg-grid-pattern pointer-events-none"></div>
+
+    <!-- Ambient glow -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-30 z-0"></div>
+    <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- NAV -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6">
+        <nav class="bg-surface/70 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center gap-8 shadow-sm w-full max-w-4xl justify-between">
+            <a href="index.html" class="text-xl font-bold font-display tracking-tight text-white">
+                Mudassir-Dev<span class="text-primary">.</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium ml-auto">
+                <a href="index.html#home" class="text-slate-400 hover:text-white transition-colors">Home</a>
+                <a href="index.html#about" class="text-slate-400 hover:text-white transition-colors">About</a>
+                <a href="projects.html" class="text-white font-bold">Projects</a>
+                <a href="index.html#writing" class="text-slate-400 hover:text-white transition-colors">Certifications</a>
+                <a href="index.html#contact" class="px-5 py-2 bg-white text-black rounded-full font-bold text-xs hover:scale-105 transition-transform">Hire Me</a>
             </div>
-
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="certification.html" class="nav-link">Certification's</a></li>
-            </ul>
-
-
-
-
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-
+            <div class="flex items-center gap-3 border-l border-white/10 pl-4 md:pl-6">
+                <button id="theme-toggle" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:bg-white/10 transition-colors">
+                    <i class="fas fa-sun text-sm"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-1">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
             </div>
         </nav>
     </header>
 
-    <!-- PROJECTS SECTION -->
-   <main>
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/olx-project.png" alt="OLX Clone">
-                    </div>
-                    <div class="project-content">
-                        <h3>OLX CLONE</h3>
-                        <p>OLX Clone — A sleek and modern landing page showcasing listings with user-friendly design and intuitive layout</p>
-                        <div class="project-tech">
-                            <span>HTML:5</span>
-                            <span>CSS:3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://olx-clone-ahmedqureshi.netlify.app/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Ahmed-Qureshi-dev/OLX-HERO-PAGE" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-300">
+        <a href="index.html" class="text-3xl font-display font-bold hover:text-primary">Home</a>
+        <a href="index.html#about" class="text-3xl font-display font-bold hover:text-primary">About</a>
+        <a href="projects.html" class="text-3xl font-display font-bold text-primary">Projects</a>
+        <a href="index.html#writing" class="text-3xl font-display font-bold hover:text-primary">Certifications</a>
+        <a href="index.html#contact" class="text-3xl font-display font-bold hover:text-primary">Contact</a>
+        <button id="close-menu" class="absolute top-8 right-8 text-slate-400 hover:text-white">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/code-x-projects.png" alt="Code-x">
-                    </div>
-                    <div class="project-content">
-                        <h3>CODE-X</h3>
-                        <p>Code-X — A virtual academy offering online courses, skill development, and interactive learning experiences."</p>
-                        <div class="project-tech">
-                            <span>HTML:5</span>
-                            <span>CSS:3</span>
-                            <span>JavaScript</span>
-                            <span>Firebase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+    <!-- PAGE HEADER -->
+    <section class="relative pt-40 pb-20 px-6 text-center z-10">
+        <div class="max-w-4xl mx-auto">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm font-medium mb-8 transition-colors group reveal">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                Back to Home
+            </a>
+            <div class="reveal delay-100">
+                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse inline-block"></span>
+                    Project Archive
+                </span>
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight text-white mb-6 reveal delay-200">
+                All <span class="grad-text">Projects</span><span class="text-primary">.</span>
+            </h1>
+            <p class="text-slate-400 text-lg max-w-xl mx-auto reveal delay-300">
+                A complete showcase of my work — web development, UI/UX, eCommerce, and digital marketing projects.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8 mt-12 reveal delay-300">
+                <div class="text-center">
+                    <p class="text-3xl font-display font-bold text-white">15+</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Total Projects</p>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/meraj-project.png" alt="Meraj Limited">
-                    </div>
-                    <div class="project-content">
-                        <h3>Meraj Limited</h3>
-                        <p>Meraj Limited — A modern website for fire machinery showcasing products, services, and company expertise."</p>
-                        <div class="project-tech">
-                            <span>Html:5</span>
-                            <span>Css:3</span>
-                            <span>Under-Developement</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://meraj-limited.vercel.app/ " class="project-link">Live Demo</a>
-                            <a href="https://github.com/Ahmed-Qureshi-dev/MRRAJ-LIMITED" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+                <div class="w-px h-10 bg-white/10 self-center hidden sm:block"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-display font-bold text-white">2024</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Started</p>
                 </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/NETFLIX-projects'.png" alt="Netflix Clone">
-                    </div>
-                    <div class="project-content">
-                        <h3>NETFLIX-CLONE</h3>
-                        <p>Netflix Hero Page Clone — A sleek landing section replicating Netflix’s modern interface and user experience</p>
-                        <div class="project-tech">
-                            <span>HTML:5</span>
-                            <span>CSS:3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://dom-net.netlify.app/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Ahmed-Qureshi-dev/NETFLIX-HERO-PAGE" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+                <div class="w-px h-10 bg-white/10 self-center hidden sm:block"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-display font-bold text-white">4+</p>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Categories</p>
                 </div>
-
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/r2rcard-projects.png" alt="R2r-care">
-                    </div>
-                    <div class="project-content">
-                        <h3>R2R-CARE</h3>
-                        <p>R2R Care — A clean and professional website designed for healthcare support and service presentation</p>
-                        <div class="project-tech">
-                            <span>Html:5</span>
-                            <span>Css:3</span>
-                            <span>UNDER-DEVELOPEMENT</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://starlit-dasik-9d8b9c.netlify.app/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Ahmed-Qureshi-dev/hakaton-project-ahmedqureshi" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/fack-hacking-projects.png" alt="Blog Platform">
-                    </div>
-                    <div class="project-content">
-                        <h3>FUN-FAKE-HACKING</h3>
-                        <p>"Fake Hacking Platform — A fun concept-based website built for entertainment and creative interaction</p>
-                        <div class="project-tech">
-                            <span>HTML:5</span>
-                            <span>CSS:3</span>
-                            <span>Advance JS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://fake-hacking-sigma.vercel.app/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/Ahmed-Qureshi-dev/fake-hacking" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
-</main>
-    <script src="script.js"></script>
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("YOUR_PUBLIC_KEY");
-        })();
-    </script>
+    <!-- FILTER BAR -->
+    <div class="sticky top-24 z-40 px-6 pb-4 pt-2">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-surface/80 backdrop-blur-xl border border-white/10 rounded-2xl px-4 py-3 flex flex-wrap gap-2 items-center reveal">
+                <span class="text-xs text-slate-500 font-bold uppercase tracking-wider mr-2 hidden sm:inline">Filter:</span>
+                <button class="filter-btn active px-4 py-1.5 rounded-full border border-white/10 text-xs font-bold transition-all" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full border border-white/10 text-xs font-bold text-slate-400 hover:border-primary hover:text-primary transition-all" data-filter="design">Design UI/UX</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full border border-white/10 text-xs font-bold text-slate-400 hover:border-primary hover:text-primary transition-all" data-filter="dev">Development</button>
+                <button class="filter-btn px-4 py-1.5 rounded-full border border-white/10 text-xs font-bold text-slate-400 hover:border-primary hover:text-primary transition-all" data-filter="mobile">Responsive Design</button>
+                <span class="ml-auto text-xs text-slate-500 font-mono hidden sm:inline" id="filter-count">Showing 15 projects</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS GRID -->
+    <main class="relative z-10 px-6 py-12 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+
+            <!-- Project 1: Agency Web -->
+            <div class="project-item reveal" data-cat="dev design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Agency Web" data-category="UI/UX Design • Web Development"
+                    data-image="./images/Aurelia.png"
+                    data-desc="Delivering innovative digital solutions in marketing, web, and mobile development to help businesses grow online. A full agency landing page with modern animations and responsive design."
+                    data-url="https://youtube.com" data-tags="HTML,CSS,JS,FIREBASE,TALWIND,ReactJS" data-year="2025">
+                    <!-- Browser Bar -->
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <!-- Screenshot -->
+                    <div class="card-img-wrap">
+                        <img src="./images/Aurelia.png" alt="Agency Web" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Dev + Design</span>
+                                <h3 class="text-base font-display font-bold text-white">Agency Web</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Delivering innovative digital solutions in marketing, web, and mobile development.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JavaScript</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Firebase</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Tailwind CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">ReactJS</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Codex Web -->
+            <div class="project-item reveal delay-100" data-cat="dev design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Codex Web" data-category="UI/UX Design • Web Development"
+                    data-image="./images/Codex.png"
+                    data-desc="Empowering students with world-class IT education and training in graphic design, web development, data science, and cyber security. A full educational platform with course listings and modern UI."
+                    data-url="https://code-x-seven-lemon.vercel.app/" data-tags="HTML,CSS,JS,Firebase" data-year="2025">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Codex.png" alt="Codex Web" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Dev + Design</span>
+                                <h3 class="text-base font-display font-bold text-white">Codex Web</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">IT education platform with course listings, responsive design, and modern UI.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Firebase</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3: Optional Portfolio -->
+            <div class="project-item reveal" data-cat="dev design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Optional Portfolio Project" data-category="Modern Design • Development • Animation"
+                    data-image="./images/optional portfolio.png"
+                    data-desc="Modern Design Portfolio Project – a showcase of my design and development skills with modern animations and responsive design. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://optional-portfolio.vercel.app/" data-tags="HTML,CSS,JS" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/optional portfolio.png" alt="Optional Portfolio Project" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Development</span>
+                                <h3 class="text-base font-display font-bold text-white">Optional Portfolio Project</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Modern portfolio with animations, responsive design, and clean UI focused on accessibility.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <!-- Project 4: Thrift Bazar -->
+            <div class="project-item reveal" data-cat="design dev mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Thrift Bazar" data-category="E-Commerce • Backend"
+                    data-image="./images/thrift bazar.png"
+                    data-desc="Thrift Bazar – Curated pre-loved fashion from shirts and jackets to jeans at unbeatable prices. Eco-friendly style meets modern eCommerce with a clean shopping experience and backend integration."
+                    data-url="https://thrift-bazar-umer.vercel.app/" data-tags="React,Firebase,Vercel" data-year="2025">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/thrift bazar.png" alt="Thrift Bazar" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">E-Commerce</span>
+                                <h3 class="text-base font-display font-bold text-white">Thrift Bazar</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Pre-loved fashion store with eco-friendly style at unbeatable prices.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">React</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Firebase</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Quote App -->
+            <div class="project-item reveal delay-100" data-cat="design dev mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Quote App" data-category="Design • Development • Mobile"
+                    data-image="./images/quote app.png"
+                    data-desc="Quote App – A sleek and modern quote application with a clean UI and seamless user experience."
+                    data-url="https://quote-app-pi-ashen.vercel.app/" data-tags="React,Node.js,Vercel" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/quote app.png" alt="Quote App" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Development</span>
+                                <h3 class="text-base font-display font-bold text-white">Quote App</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">A sleek and modern quote application with a clean UI and seamless user experience.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Firebase</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Detailing Bros -->
+            <div class="project-item reveal delay-200" data-cat="dev design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Detailing Bros" data-category="Full Stack • Firebase"
+                    data-image="./images/detailing bros.png"
+                    data-desc="A Modern Web Store for Car Detailing Services with Firebase backend, admin panel, and Base64 image compression for optimized performance."
+                    data-url="https://detailing-bros.vercel.app/" data-tags="HTML,CSS,JS,Firebase" data-year="2025">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/detailing bros.png" alt="Detailing Bros" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Development</span>
+                                <h3 class="text-base font-display font-bold text-white">Detailing Bros</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Car detailing store with Firebase backend, admin panel, and Base64 image compression.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Firebase</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 7: Trade Empire -->
+            <div class="project-item reveal delay-200" data-cat="design web">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Trade Empire" data-category="Educational • E-Learning"
+                    data-image="./images/Trade Empire.png"
+                    data-desc="Trade Empire – Pakistan's leading online platform to learn smart money concepts and modern trading skills for success in the financial markets. Clean design with a strong educational focus."
+                    data-url="https://web-assigment-two.vercel.app/" data-tags="HTML,CSS,JavaScript" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Trade Empire.png" alt="Trade Empire" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Education</span>
+                                <h3 class="text-base font-display font-bold text-white">Trade Empire</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Pakistan's leading platform to learn smart money and trading skills.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <!-- Project 8: Fake Hacking Website -->
+            <div class="project-item reveal delay-100" data-cat="dev design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Fake Hacking Website" data-category="Fun • Development • Animation"
+                    data-image="./images/Fake Hacking.png"
+                    data-desc="Fun Fake Hacking Website – a playful project showcasing my design and development skills with modern animations and responsive design."
+                    data-url="https://fake-hacking-vert.vercel.app/" data-tags="HTML,CSS,JS" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Fake Hacking.png" alt="Fake Hacking Website" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Development</span>
+                                <h3 class="text-base font-display font-bold text-white">Fake Hacking Website</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Playful hacking simulation with modern animations and clean responsive design.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9: Rental Cars Website -->
+            <div class="project-item reveal delay-200" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Rental Cars Website" data-category="Car Rental • Vehicle Booking Website"
+                    data-image="./images/Rental Cars.png"
+                    data-desc="Find, book, and rent cars easily online with fast search, great deals, and reliable service for all your travel needs."
+                    data-url="https://rentacar-ashen.vercel.app/" data-tags="HTML,CSS,JS" data-year="2025">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Rental Cars.png" alt="Rental Cars Website" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Web Development</span>
+                                <h3 class="text-base font-display font-bold text-white">Rental Cars Website</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Find, book, and rent cars easily online with fast search, great deals, and reliable service.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10: R2R Care Clone -->
+            <div class="project-item reveal" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="R2R Care Clone" data-category="Modern Design • Clone"
+                    data-image="./images/R2R care.png"
+                    data-desc="Modern Design Clone of R2R Care – a healthcare platform offering telemedicine, appointment booking, and health resources. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://r2-r-care-figma-desing.vercel.app/" data-tags="Design,UI/UX,Canva,Figma" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/R2R care.png" alt="R2R Care Clone" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Design</span>
+                                <h3 class="text-base font-display font-bold text-white">R2R Care Clone</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Healthcare platform clone with telemedicine, appointment booking, and clean accessible UI.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Design</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Figma</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 11: Usability Hub Clone -->
+            <div class="project-item reveal delay-100" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Usability Hub Clone" data-category="Design • Figma"
+                    data-image="./images/Usablity Hub.png"
+                    data-desc="Modern Design Clone of Usability Hub – a user research platform for testing and validating design concepts. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://usablity-hub-clone-pearl.vercel.app/" data-tags="Design,UI/UX,Canva,Figma" data-year="2025">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Usablity Hub.png" alt="Usability Hub Clone" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Design</span>
+                                <h3 class="text-base font-display font-bold text-white">Usability Hub Clone</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">User research platform clone for testing and validating design concepts with clean UI.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Design</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Figma</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 12: OLX Clone -->
+            <div class="project-item reveal delay-200" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="OLX Clone" data-category="Design • Figma"
+                    data-image="./images/olx clone.png"
+                    data-desc="Modern Design Clone of OLX – a real estate and classified ads platform. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://olx-hero-page-clone.vercel.app/" data-tags="Design,UI/UX,Canva,Figma" data-year="2025">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/olx clone.png" alt="OLX Clone" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Design</span>
+                                <h3 class="text-base font-display font-bold text-white">OLX Clone</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Classified ads platform clone with clean UI and great user experience.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Design</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Figma</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 13: Netflix Clone -->
+            <div class="project-item reveal" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Netflix Clone" data-category="Modern Design • Clone"
+                    data-image="./images/Netflix Clone.png"
+                    data-desc="Modern Design Clone of Netflix – a streaming platform for movies and TV shows. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://netflix-clone-ruby-phi.vercel.app/" data-tags="Design,UI/UX,Canva,Figma" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Netflix Clone.png" alt="Netflix Clone" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Design</span>
+                                <h3 class="text-base font-display font-bold text-white">Netflix Clone</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Streaming platform clone for movies and TV shows with clean responsive UI.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Design</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Figma</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 14: Meeraj Limited Website -->
+            <div class="project-item reveal delay-100" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="Meeraj Limited Website" data-category="Design • Development • Logic"
+                    data-image="./images/Meeraj Limited.png"
+                    data-desc="Meeraj Limited Website – a professional project showcasing my design and development skills with modern animations and responsive design. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://meeraj-limited-clone.vercel.app/" data-tags="HTML,CSS,JS" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/Meeraj Limited.png" alt="Meeraj Limited Website" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Design</span>
+                                <h3 class="text-base font-display font-bold text-white">Meeraj Limited Website</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Professional website with modern animations, responsive design, and clean UI.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">HTML</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">CSS</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">JS</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 15: One Call Solution Clone -->
+            <div class="project-item reveal delay-200" data-cat="design mobile">
+                <div class="project-card-wrap bg-surface border border-white/10"
+                    data-title="One Call Solution Clone" data-category="Design • UI/UX • Clone"
+                    data-image="./images/one call.png"
+                    data-desc="One Call Solution Clone – a professional project showcasing my design and development skills with modern animations and responsive design. Clean UI with a focus on user experience and accessibility."
+                    data-url="https://onecallsolution-t.vercel.app/" data-tags="UI/UX,Design,Canva,Figma" data-year="2024">
+                    <div class="browser-bar">
+                        <div class="browser-dot dot-r"></div>
+                        <div class="browser-dot dot-y"></div>
+                        <div class="browser-dot dot-g"></div>
+                        <div class="url-pill"></div>
+                    </div>
+                    <div class="card-img-wrap">
+                        <img src="./images/one call.png" alt="One Call Solution Clone" loading="lazy">
+                        <div class="img-hover-overlay">
+                            <span class="px-4 py-2 bg-white text-black rounded-full text-xs font-bold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-5 relative z-10">
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <span class="tag mb-2 inline-block">Design</span>
+                                <h3 class="text-base font-display font-bold text-white">One Call Solution Clone</h3>
+                            </div>
+                            <span class="text-slate-500 text-xs font-mono pt-1">2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">Professional solution platform clone with modern animations and responsive clean design.</p>
+                        <div class="flex items-center justify-between mt-4 pt-3 border-t border-white/5">
+                            <div class="flex gap-1.5 flex-wrap">
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">UI/UX</span>
+                                <span class="px-2 py-0.5 bg-white/5 rounded text-[10px] text-slate-400">Figma</span>
+                            </div>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Empty state -->
+        <div id="empty-state" class="hidden text-center py-24">
+            <i class="fas fa-folder-open text-4xl text-slate-600 mb-4"></i>
+            <p class="text-slate-500">No projects in this category yet.</p>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="mt-20 relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-secondary p-10 md:p-14 text-center reveal">
+            <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
+            <div class="relative z-10">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Have a project in mind?</h2>
+                <p class="text-white/70 mb-8 text-lg">Let's build something amazing together.</p>
+                <a href="https://wa.me/+92253548990" target="_blank"
+                    class="inline-block px-8 py-3.5 bg-white text-black rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-xl">
+                    Let's Talk <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-white/10 mt-16 px-6 py-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+            <a href="index.html" class="text-lg font-display font-bold text-white hover:text-primary transition-colors">
+                Ahmed-Qureshi-Dev<span class="text-primary">.</span>
+            </a>
+            <div class="flex gap-6">
+                <a href="https://github.com/Ahmed-Qureshi-dev" class="hover:text-primary transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ahmed-qureshi-6bbb62389" class="hover:text-primary transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/+923253548990" class="hover:text-primary transition-colors"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:ahmedqureshi6120@gmail.com" class="hover:text-primary transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>© <span id="year"></span> Ahmed Qureshi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/+923253548990" target="_blank"
+        class="fixed bottom-8 right-8 z-[60] w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-30 animate-ping"></span>
+        <i class="fab fa-whatsapp text-3xl z-10"></i>
+    </a>
+
+    <!-- PROJECT MODAL -->
+    <div id="project-modal" class="fixed inset-0 z-[100] items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="modal-backdrop"></div>
+        <div class="relative bg-[#111] w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl border border-white/10 transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
+            <button id="close-modal" class="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-red-500 transition-colors z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="h-64 md:h-80 w-full overflow-hidden">
+                <img id="modal-image" src="" class="w-full h-full object-cover object-top" alt="">
+            </div>
+            <div class="p-8 md:p-10">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+                    <div>
+                        <span id="modal-category" class="text-primary font-bold text-xs tracking-widest uppercase mb-2 block"></span>
+                        <h2 id="modal-title" class="text-3xl md:text-4xl font-display font-bold text-white"></h2>
+                    </div>
+                    <a id="modal-visit-btn" href="#" target="_blank"
+                        class="px-6 py-2.5 bg-white text-black rounded-full font-bold text-sm hover:scale-105 transition-transform whitespace-nowrap">
+                        Visit Website <i class="fas fa-external-link-alt ml-1 text-xs"></i>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="md:col-span-2">
+                        <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-3">About the Project</h3>
+                        <p id="modal-desc" class="text-slate-300 leading-relaxed"></p>
+                    </div>
+                    <div class="space-y-5">
+                        <div>
+                            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Tech Stack</h4>
+                            <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Year</h4>
+                            <p id="modal-year" class="text-slate-400 text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
 </body>
-</html> 
+</html>
