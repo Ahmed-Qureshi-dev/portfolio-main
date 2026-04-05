@@ -256,50 +256,79 @@ const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const btn = e.target.querySelector('button');
+    const btn = e.target.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
 
     btn.innerHTML = '<i class="fas fa-circle-notch animate-spin"></i> Sending...';
     btn.disabled = true;
 
-    try {
-        // Get form data
-        const formData = {
-            name: e.target.user_name.value,
-            email: e.target.user_email.value,
-            message: e.target.message.value,
-            timestamp: window.firestoreTimestamp()
-        };
+    // Get form data
+    const formData = {
+        name: e.target.user_name.value,
+        email: e.target.user_email.value,
+        message: e.target.message.value,
+        timestamp: window.firestoreTimestamp()
+    };
 
-        // Save to Firebase Firestore
+    let firebaseSaved = false;
+    let emailSent = false;
+
+    // Step 1: Save to Firebase Firestore
+    try {
         await window.firestoreAddDoc(
             window.firestoreCollection(window.firebaseDB, 'contacts'),
             formData
         );
+        firebaseSaved = true;
+        console.log('✅ Data saved to Firebase Firestore');
+    } catch (error) {
+        console.error('❌ Firebase Error:', error);
+    }
 
-        // Send email using EmailJS
-        await emailjs.send(
-            'service_6dwiitt',  // Your EmailJS service ID
-            'template_xcak9lp', // Your EmailJS template ID
-            {
-                from_name: formData.name,
-                from_email: formData.email,
-                message: formData.message,
-                to_name: 'Ahmed Qureshi'
-            }
+    // Step 2: Send email using EmailJS
+    try {
+        const emailParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+            to_name: 'Ahmed Qureshi'
+        };
+
+        console.log('📧 Sending email with EmailJS...');
+        
+        const response = await emailjs.send(
+            'service_6dwiitt',  // Service ID
+            'template_xcak9lp', // Template ID
+            emailParams
         );
 
-        // Show success message
-        showToast('Message sent successfully! We will contact you soon.');
-        e.target.reset();
+        console.log('✅ EmailJS Success:', response);
+        emailSent = true;
         
     } catch (error) {
-        console.error('Error:', error);
-        showToast('Failed to send message. Please try again.', 'error');
-    } finally {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
+        console.error('❌ EmailJS Error:', error);
+        if (error.text) {
+            console.error('Error details:', error.text);
+        }
     }
+
+    // Step 3: Show appropriate message
+    if (firebaseSaved && emailSent) {
+        showToast('✅ Message sent successfully! We will contact you soon.');
+        e.target.reset();
+    } else if (firebaseSaved && !emailSent) {
+        showToast('Message saved! Email notification pending but we got your message.', 'success');
+        e.target.reset();
+    } else if (!firebaseSaved && emailSent) {
+        showToast('Email sent successfully!', 'success');
+        e.target.reset();
+    } else {
+        showToast('❌ Failed to send message. Please try again or contact via WhatsApp.', 'error');
+    }
+
+    // Reset button
+    btn.innerHTML = originalText;
+    btn.disabled = false;
 });
 
 // === SCROLL REVEAL ANIMATION [MODERN] ===
