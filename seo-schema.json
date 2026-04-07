@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "PersonPosting",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://ahmed-qureshi-three.vercel.app/#person",
+      "name": "Ahmed Qureshi",
+      "url": "https://ahmed-qureshi-three.vercel.app/",
+      "sameAs": [
+        "https://www.linkedin.com/in/ahmedqureshidev/",
+        "https://github.com/"
+      ],
+      "jobTitle": "Frontend Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "image": "https://ahmed-qureshi-three.vercel.app/me.png",
+      "description": "Frontend Developer specializing in React, HTML, CSS, and JavaScript with expertise in building modern web applications."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ahmed-qureshi-three.vercel.app/#website",
+      "url": "https://ahmed-qureshi-three.vercel.app/",
+      "name": "Ahmed Qureshi - Frontend Developer Portfolio",
+      "description": "Portfolio of Ahmed Qureshi, a Frontend Developer specializing in React, HTML, CSS, and JavaScript.",
+      "author": {
+        "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+      },
+      "creator": {
+        "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "url": "https://www.linkedin.com/in/ahmedqureshidev/",
+      "name": "Ahmed Qureshi LinkedIn Profile",
+      "description": "Connect with Ahmed Qureshi on LinkedIn"
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Ahmed Qureshi",
+      "url": "https://ahmed-qureshi-three.vercel.app/",
+      "image": "https://ahmed-qureshi-three.vercel.app/me.png",
+      "description": "Frontend Developer - Web Development Services",
+      "priceRange": "$$$",
+      "sameAs": [
+        "https://www.linkedin.com/in/ahmedqureshidev/",
+        "https://ahmed-qureshi-three.vercel.app/"
+      ]
+    }
+  ]
+}

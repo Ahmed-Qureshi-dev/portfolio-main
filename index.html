@@ -1,60 +1,131 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
 
-    <!-- SEO Identity -->
+    <!-- ═══════════════════════════════════════════
+         SEO STRUCTURED DATA (JSON-LD)
+         Connects portfolio ↔ LinkedIn ↔ GitHub
+    ═══════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
-     "@context": "https://schema.org",
-     "@type": "Person",
-     "name": "Ahmed Qureshi",
-     "url": "https://ahmed-qureshi-three.vercel.app/",
-     "jobTitle": "Frontend Developer"
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed Qureshi",
+        "url": "https://ahmed-qureshi-three.vercel.app/",
+        "jobTitle": "MERN Stack Developer",
+        "description": "MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. Building clean UIs and full-stack real-world web projects.",
+        "email": "codexahmed99@gmail.com",
+        "knowsAbout": [
+            "React JS", "Node.js", "Express JS", "MongoDB", "Next.js",
+            "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap",
+            "Figma", "Responsive Design", "Full Stack Development",
+            "Frontend Development", "REST APIs", "Vercel", "Netlify"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Karachi",
+            "addressRegion": "Sindh",
+            "addressCountry": "PK"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/ahmed-qureshi-6bbb62389",
+            "https://github.com/Ahmed-Qureshi-dev",
+            "https://www.tiktok.com/@codexahmed"
+        ]
     }
     </script>
 
+    <!-- ═══════════════════════════════════════════
+         CHARSET & VIEWPORT
+    ═══════════════════════════════════════════ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio : Ahmed Qureshi</title>
+    <!-- ═══════════════════════════════════════════
+         PRIMARY SEO
+    ═══════════════════════════════════════════ -->
+    <title>Ahmed Qureshi | MERN Stack Developer — React JS, Node.js, MongoDB, Express</title>
 
-    <meta name="description" content="Ahmed Qureshi is a Frontend Developer specializing in HTML, CSS, and JavaScript. Explore projects and portfolio.">
-    <meta name="keywords" content="ahmed qureshi, Frontend Developer, React Developer, Web Developer Portfolio , ahmed qureshi dev ">
+    <meta name="description"
+        content="Ahmed Qureshi is a MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. View projects, portfolio, and hire for full-stack web development.">
 
+    <meta name="keywords"
+        content="Ahmed Qureshi, MERN Stack Developer Karachi, MERN Stack Developer Pakistan, React JS Developer Pakistan, Node.js Developer Karachi, MongoDB Developer, Express JS Developer, Full Stack Developer Pakistan, Next.js Developer, Web Developer Portfolio, Hire MERN Stack Developer, JavaScript Developer Karachi, HTML CSS Developer, Bootstrap Developer, Figma UI Developer, ahmed qureshi dev, codexahmed, CODE-X, Frontend Developer Pakistan">
+
+    <meta name="author" content="Ahmed Qureshi">
+    <meta name="copyright" content="© 2026 Ahmed Qureshi. All rights reserved.">
     <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://ahmed-qureshi-three.vercel.app/">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Ahmed Qureshi | Frontend Developer">
-    <meta property="og:description" content="Frontend Developer specializing in React JS, HTML, CSS & JavaScript">
-    <meta property="og:url" content="https://ahmed-qureshi-three.vercel.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ahmed-qureshi-three.vercel.app/me.png">
-
-    <!-- Favicon -->
-    <link rel="icon" href="/fav.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/fav.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/fav.ico">
-    <link rel="icon" sizes="192x192" href="/fav.ico">
-    <link rel="icon" sizes="512x512" href="/fav.ico">
-    <meta name="msapplication-TileImage" content="/fav.ico">
-
+    <meta name="rating" content="General">
     <meta name="theme-color" content="#000000">
 
-    <!-- Google Fonts -->
+    <!-- ═══════════════════════════════════════════
+         CANONICAL
+    ═══════════════════════════════════════════ -->
+    <link rel="canonical" href="https://ahmed-qureshi-three.vercel.app/">
+
+    <!-- ═══════════════════════════════════════════
+         OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
+    ═══════════════════════════════════════════ -->
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="Ahmed Qureshi | MERN Stack Developer">
+    <meta property="og:title"       content="Ahmed Qureshi | MERN Stack Developer — React, Node.js, MongoDB, Express">
+    <meta property="og:description" content="MERN Stack Developer based in Karachi, Pakistan. Specializing in React JS, Node.js, Express, and MongoDB. View my portfolio and projects.">
+    <meta property="og:url"         content="https://ahmed-qureshi-three.vercel.app/">
+    <meta property="og:image"       content="https://ahmed-qureshi-three.vercel.app/me.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"   content="Ahmed Qureshi — Frontend Developer">
+    <meta property="og:locale"      content="en_US">
+
+    <!-- ═══════════════════════════════════════════
+         TWITTER / X CARD
+         (No Twitter/X account — tags kept minimal
+          for cross-platform card rendering)
+    ═══════════════════════════════════════════ -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Ahmed Qureshi | MERN Stack Developer — React, Node.js, MongoDB, Express">
+    <meta name="twitter:description" content="MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB.">
+    <meta name="twitter:image"       content="https://ahmed-qureshi-three.vercel.app/me.png">
+    <meta name="twitter:image:alt"   content="Ahmed Qureshi — Frontend Developer">
+
+    <!-- ═══════════════════════════════════════════
+         FAVICON
+    ═══════════════════════════════════════════ -->
+    <link rel="icon"              href="/fav.ico" type="image/x-icon">
+    <link rel="shortcut icon"     href="/fav.ico" type="image/x-icon">
+    <link rel="apple-touch-icon"  href="/fav.ico">
+    <meta name="msapplication-TileImage" content="/fav.ico">
+
+    <!-- ═══════════════════════════════════════════
+         PERFORMANCE — PRELOAD CRITICAL ASSETS
+    ═══════════════════════════════════════════ -->
+    <link rel="preload" as="image" href="/me.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-    <!-- Font Awesome -->
+    <!-- ═══════════════════════════════════════════
+         MANIFEST & FEEDS
+    ═══════════════════════════════════════════ -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="alternate" type="application/rss+xml" title="Ahmed Qureshi — Portfolio Feed" href="/rss.xml">
+
+    <!-- ═══════════════════════════════════════════
+         FONTS
+    ═══════════════════════════════════════════ -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ═══════════════════════════════════════════
+         FONT AWESOME
+    ═══════════════════════════════════════════ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS (CDN) -->
+    <!-- ═══════════════════════════════════════════
+         TAILWIND CSS + CONFIG
+    ═══════════════════════════════════════════ -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -65,30 +136,30 @@
                 },
                 extend: {
                     colors: {
-                        primary: '#2563eb',
+                        primary:   '#2563eb',
                         secondary: '#4f46e5',
-                        dark: '#050505',
-                        surface: '#0a0a0a',
-                        whatsapp: '#25D366',
+                        dark:      '#050505',
+                        surface:   '#0a0a0a',
+                        whatsapp:  '#25D366',
                     },
                     animation: {
-                        'fade-up': 'fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
-                        'marquee': 'marquee 30s linear infinite',
-                        'spin-slow': 'spin 15s linear infinite',
+                        'fade-up':    'fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+                        'marquee':    'marquee 30s linear infinite',
+                        'spin-slow':  'spin 15s linear infinite',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'text-reveal': 'textReveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+                        'text-reveal':'textReveal 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
                     },
                     keyframes: {
                         fadeUp: {
-                            '0%': { opacity: '0', transform: 'translateY(40px)', filter: 'blur(10px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' },
+                            '0%':   { opacity: '0', transform: 'translateY(40px)', filter: 'blur(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)',    filter: 'blur(0)' },
                         },
                         textReveal: {
-                            '0%': { transform: 'translateY(100%)' },
+                            '0%':   { transform: 'translateY(100%)' },
                             '100%': { transform: 'translateY(0)' },
                         },
                         marquee: {
-                            '0%': { transform: 'translateX(0%)' },
+                            '0%':   { transform: 'translateX(0%)' },
                             '100%': { transform: 'translateX(-100%)' },
                         }
                     }
@@ -97,13 +168,15 @@
         }
     </script>
 
-    <!-- Your existing stylesheet -->
+    <!-- ═══════════════════════════════════════════
+         STYLESHEETS
+    ═══════════════════════════════════════════ -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- New stylesheet from new design -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- EmailJS SDK -->
+    <!-- ═══════════════════════════════════════════
+         EMAILJS SDK
+    ═══════════════════════════════════════════ -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
@@ -181,7 +254,8 @@
         <a href="#home" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Home</a>
         <a href="#about" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">About</a>
         <a href="#work" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Project</a>
-        <a href="#writing" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Certifications</a>
+        <a href="#writing"
+            class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Certifications</a>
         <a href="#contact" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Contact</a>
         <button id="close-menu" aria-label="Close Menu"
             class="absolute top-8 right-8 text-slate-500 hover:text-black dark:hover:text-white hoverable">
@@ -234,14 +308,15 @@
                             <div
                                 class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
                             </div>
-                             <a href="./All Certificates Pdf/Mudassir Shaikh Cv.pdf" download
-        class="group relative px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold overflow-hidden hover:scale-[1.02] transition-transform shadow-xl shadow-primary/10 hoverable magnetic-btn focus:outline-none" target="_blank">
-        <i class="fas fa-download text-sm animate-bounce"></i>
-        <span class="relative z-10">Download CV</span>
-        <div
-            class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
-        </div>
-    </a>
+                            <a href="./All Certificates Pdf/Mudassir Shaikh Cv.pdf" download
+                                class="group relative px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold overflow-hidden hover:scale-[1.02] transition-transform shadow-xl shadow-primary/10 hoverable magnetic-btn focus:outline-none"
+                                target="_blank">
+                                <i class="fas fa-download text-sm animate-bounce"></i>
+                                <span class="relative z-10">Download CV</span>
+                                <div
+                                    class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+                                </div>
+                            </a>
                         </a>
                         <a href="#contact"
                             class="flex items-center justify-center w-12 h-12 rounded-full border border-slate-200 dark:border-white/20 hover:border-primary hover:text-primary transition-colors hoverable magnetic-btn focus:outline-none"
@@ -278,7 +353,8 @@
         class="section-spy py-20 bg-white/50 dark:bg-white/5 border-y border-slate-200 dark:border-white/5 backdrop-blur-sm relative z-10">
         <div class="container mx-auto px-6 max-w-6xl">
             <h2 class="font-display text-4xl font-bold text-slate-900 dark:text-white mb-12 reveal-on-scroll">My Arsenal
-                <span class="text-primary">.</span></h2>
+                <span class="text-primary">.</span>
+            </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[500px]">
 
@@ -342,7 +418,8 @@
                             class="hover:text-primary transition-colors hover:scale-110 transform"><i
                                 class="fa-brands fa-whatsapp"></i></a>
                         <a href="https://mailto:ahmedqureshi6120@gmail.com"
-                            class="hover:text-primary transition-colors hover:scale-110 transform"><i class="fa-solid fa-envelope"></i></i></a>
+                            class="hover:text-primary transition-colors hover:scale-110 transform"><i
+                                class="fa-solid fa-envelope"></i></i></a>
                     </div>
                 </div>
 
@@ -579,190 +656,226 @@
     </section>
 
     <!-- Selected Work -->
-<section id="work" class="section-spy py-24 relative z-10">
-    <div class="container mx-auto px-6 max-w-6xl">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-14 gap-6 reveal-on-scroll">
-            <h2 class="font-display text-4xl md:text-6xl font-bold text-slate-900 dark:text-white">
-                Projects<br>Selected<span class="text-primary">.</span>
-            </h2>
-            <p class="text-slate-500 text-sm md:text-base max-w-xs text-left md:text-right">
-                A combination of business strategy, aesthetic design, and clean code.
-            </p>
+    <section id="work" class="section-spy py-24 relative z-10">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-14 gap-6 reveal-on-scroll">
+                <h2 class="font-display text-4xl md:text-6xl font-bold text-slate-900 dark:text-white">
+                    Projects<br>Selected<span class="text-primary">.</span>
+                </h2>
+                <p class="text-slate-500 text-sm md:text-base max-w-xs text-left md:text-right">
+                    A combination of business strategy, aesthetic design, and clean code.
+                </p>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="flex flex-wrap gap-3 mb-14 reveal-on-scroll delay-100" id="portfolio-filters">
+                <button
+                    class="filter-btn active px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn"
+                    data-filter="all">All</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn"
+                    data-filter="design">Design UI/UX</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn"
+                    data-filter="dev">Development</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn"
+                    data-filter="mobile">Responsive Design</button>
+            </div>
+
+            <!-- 2-Column Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10" id="projects-grid">
+
+                <!-- Project 1: Agency Web -->
+                <article
+                    class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll"
+                    data-filter-category="all dev design mobile" data-title="Agency web"
+                    data-category="Design UI/UX • Development" data-image="./images/Aurelia.png"
+                    data-desc="Delivering innovative digital solutions in marketing, web, and mobile development to help businesses grow online."
+                    data-url="https://youtube.com">
+                    <div class="spotlight-overlay"></div>
+
+                    <!-- Browser Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10"
+                        style="background:#0d1117;">
+                        <!-- Browser Bar -->
+                        <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3"
+                            style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
+                            <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
+                            <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);">
+                            </div>
+                        </div>
+                        <!-- Screenshot -->
+                        <img src="./images/Aurelia.png" loading="lazy" width="1200" height="750"
+                            class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
+                            style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
+                            alt="Agency Web">
+                        <!-- Hover Overlay -->
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none">
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
+                        <div>
+                            <h3
+                                class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">
+                                Agency web</h3>
+                            <p class="text-slate-500 text-xs">Design UI/UX • Web Development • Responsive</p>
+                        </div>
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
+                            <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Project 2: Codex Web (offset down on desktop) -->
+                <article
+                    class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll delay-100 sm:mt-16"
+                    data-filter-category="dev mobile all design" data-title="Codex Web"
+                    data-category="Design UI/UX • Development" data-image="./images/Codex.png"
+                    data-desc="Empowering students with world-class IT education and training in graphic design, web development, data science, and cyber security."
+                    data-url="https://code-x-seven-lemon.vercel.app/">
+                    <div class="spotlight-overlay"></div>
+
+                    <!-- Browser Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10"
+                        style="background:#0d1117;">
+                        <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3"
+                            style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
+                            <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
+                            <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);">
+                            </div>
+                        </div>
+                        <img src="./images/Codex.png" loading="lazy" width="1200" height="750"
+                            class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
+                            style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
+                            alt="Codex Web">
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none">
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
+                        <div>
+                            <h3
+                                class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">
+                                Codex Web</h3>
+                            <p class="text-slate-500 text-xs">Design UI/UX • Web Development • Responsive</p>
+                        </div>
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
+                            <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Project 3: Detailing Bros -->
+                <article
+                    class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll"
+                    data-filter-category="design all dev mobile" data-title="Detailing Bros"
+                    data-category="Client Reach • User Experience" data-image="./images/detailing bros.png"
+                    data-desc="Detailing Bros – A modern detailing service platform offering convenient and reliable car cleaning solutions."
+                    data-url="https://detailing-bros.vercel.app/">
+                    <div class="spotlight-overlay"></div>
+
+                    <!-- Browser Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10"
+                        style="background:#0d1117;">
+                        <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3"
+                            style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
+                            <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
+                            <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);">
+                            </div>
+                        </div>
+                        <img src="./images/detailing bros.png" loading="lazy" width="1200" height="750"
+                            class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
+                            style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
+                            alt="Detailing Bros">
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none">
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
+                        <div>
+                            <h3
+                                class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">
+                                Detailing Bros</h3>
+                            <p class="text-slate-500 text-xs">Client Reach • User Experience</p>
+                        </div>
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
+                            <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
+                        </span>
+                    </div>
+                </article>
+
+                <!-- Project 4: Fake Hacking (offset down on desktop) -->
+                <article
+                    class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll delay-100 sm:mt-16"
+                    data-filter-category="mobile design all dev" data-title="Fake Hacking Website"
+                    data-category="Fun • Development • Animation" data-image="./images/Fake Hacking.png"
+                    data-desc="Fun Fake Hacking Website – a playful project showcasing my design and development skills with modern animations and responsive design."
+                    data-url="https://fake-hacking-vert.vercel.app/">
+                    <div class="spotlight-overlay"></div>
+
+                    <!-- Browser Frame -->
+                    <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10"
+                        style="background:#0d1117;">
+                        <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3"
+                            style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
+                            <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
+                            <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
+                            <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);">
+                            </div>
+                        </div>
+                        <img src="./images/Fake Hacking.png" loading="lazy" width="1200" height="750"
+                            class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
+                            style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
+                            alt="Thrift Bazar">
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none">
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
+                        <div>
+                            <h3
+                                class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">
+                                Fake Hacking Website</h3>
+                            <p class="text-slate-500 text-xs">Fun • Development • Animation</p>
+                        </div>
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
+                            <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-20">
+                <a href="./projects.html"
+                    class="inline-block px-8 py-3 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase hoverable magnetic-btn focus:outline-none">
+                    VIEW ALL ARCHIVES
+                </a>
+            </div>
         </div>
-
-        <!-- Project Filters -->
-        <div class="flex flex-wrap gap-3 mb-14 reveal-on-scroll delay-100" id="portfolio-filters">
-            <button class="filter-btn active px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn" data-filter="all">All</button>
-            <button class="filter-btn px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn" data-filter="design">Design UI/UX</button>
-            <button class="filter-btn px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn" data-filter="dev">Development</button>
-            <button class="filter-btn px-5 py-2 rounded-full border border-slate-200 dark:border-white/10 text-sm font-bold text-slate-600 dark:text-slate-300 hover:border-primary hover:text-primary transition-all hoverable magnetic-btn" data-filter="mobile">Responsive Design</button>
-        </div>
-
-        <!-- 2-Column Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10" id="projects-grid">
-
-            <!-- Project 1: Agency Web -->
-            <article
-                class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll"
-                data-filter-category="all dev design mobile"
-                data-title="Agency web"
-                data-category="Design UI/UX • Development"
-                data-image="./images/Aurelia.png"
-                data-desc="Delivering innovative digital solutions in marketing, web, and mobile development to help businesses grow online."
-                data-url="https://youtube.com">
-                <div class="spotlight-overlay"></div>
-
-                <!-- Browser Frame -->
-                <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10" style="background:#0d1117;">
-                    <!-- Browser Bar -->
-                    <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3" style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
-                        <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
-                        <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);"></div>
-                    </div>
-                    <!-- Screenshot -->
-                    <img src="./images/Aurelia.png" loading="lazy" width="1200" height="750"
-                        class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
-                        style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
-                        alt="Agency Web">
-                    <!-- Hover Overlay -->
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none"></div>
-                </div>
-
-                <div class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
-                    <div>
-                        <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Agency web</h3>
-                        <p class="text-slate-500 text-xs">Design UI/UX • Web Development • Responsive</p>
-                    </div>
-                    <span class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
-                        <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
-                    </span>
-                </div>
-            </article>
-
-            <!-- Project 2: Codex Web (offset down on desktop) -->
-            <article
-                class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll delay-100 sm:mt-16"
-                data-filter-category="dev mobile all design"
-                data-title="Codex Web"
-                data-category="Design UI/UX • Development"
-                data-image="./images/Codex.png"
-                data-desc="Empowering students with world-class IT education and training in graphic design, web development, data science, and cyber security."
-                data-url="https://code-x-seven-lemon.vercel.app/">
-                <div class="spotlight-overlay"></div>
-
-                <!-- Browser Frame -->
-                <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10" style="background:#0d1117;">
-                    <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3" style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
-                        <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
-                        <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);"></div>
-                    </div>
-                    <img src="./images/Codex.png" loading="lazy" width="1200" height="750"
-                        class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
-                        style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
-                        alt="Codex Web">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none"></div>
-                </div>
-
-                <div class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
-                    <div>
-                        <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Codex Web</h3>
-                        <p class="text-slate-500 text-xs">Design UI/UX • Web Development • Responsive</p>
-                    </div>
-                    <span class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
-                        <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
-                    </span>
-                </div>
-            </article>
-
-            <!-- Project 3: Detailing Bros -->
-            <article
-                class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll"
-                data-filter-category="design all dev mobile"
-                data-title="Detailing Bros"
-                data-category="Client Reach • User Experience"
-                data-image="./images/detailing bros.png"
-                data-desc="Detailing Bros – A modern detailing service platform offering convenient and reliable car cleaning solutions."
-                data-url="https://detailing-bros.vercel.app/">
-                <div class="spotlight-overlay"></div>
-
-                <!-- Browser Frame -->
-                <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10" style="background:#0d1117;">
-                    <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3" style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
-                        <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
-                        <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);"></div>
-                    </div>
-                    <img src="./images/detailing bros.png" loading="lazy" width="1200" height="750"
-                        class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
-                        style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
-                        alt="Detailing Bros">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none"></div>
-                </div>
-
-                <div class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
-                    <div>
-                        <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Detailing Bros</h3>
-                        <p class="text-slate-500 text-xs">Client Reach • User Experience</p>
-                    </div>
-                    <span class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
-                        <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
-                    </span>
-                </div>
-            </article>  
-
-            <!-- Project 4: Fake Hacking (offset down on desktop) -->
-            <article
-                class="project-item spotlight-card group cursor-pointer project-trigger hoverable reveal-on-scroll delay-100 sm:mt-16"
-                data-filter-category="mobile design all dev"
-                data-title="Fake Hacking Website"
-                data-category="Fun • Development • Animation"
-                data-image="./images/Fake Hacking.png"
-                data-desc="Fun Fake Hacking Website – a playful project showcasing my design and development skills with modern animations and responsive design."
-                data-url="https://fake-hacking-vert.vercel.app/">
-                <div class="spotlight-overlay"></div>
-
-                <!-- Browser Frame -->
-                <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-white/10 group-hover:border-primary/30 transition-all duration-300 shadow-md group-hover:shadow-xl group-hover:shadow-primary/10" style="background:#0d1117;">
-                    <div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-1.5 px-3" style="height:26px; background:#1e1e1e; border-bottom:1px solid rgba(255,255,255,0.08);">
-                        <span class="w-2 h-2 rounded-full" style="background:#ff5f57;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#febc2e;"></span>
-                        <span class="w-2 h-2 rounded-full" style="background:#28c840;"></span>
-                        <div class="flex-1 mx-2 rounded" style="height:11px; background:rgba(255,255,255,0.08);"></div>
-                    </div>
-                    <img src="./images/Fake Hacking.png" loading="lazy" width="1200" height="750"
-                        class="absolute left-0 right-0 w-full transition-transform duration-700 group-hover:scale-105"
-                        style="top:26px; height:calc(100% - 26px); object-fit:cover; object-position:top center;"
-                        alt="Thrift Bazar">
-                    <div class="absolute inset-0 bg-black/10 group-hover:bg-primary/5 transition-colors duration-500 z-20 pointer-events-none"></div>
-                </div>
-
-                <div class="flex justify-between items-start border-b border-slate-200 dark:border-white/10 pb-4 relative z-10">
-                    <div>
-                        <h3 class="text-xl font-display font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors">Fake Hacking Website</h3>
-                        <p class="text-slate-500 text-xs">Fun • Development • Animation</p>
-                    </div>
-                    <span class="w-8 h-8 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all flex-shrink-0 mt-1">
-                        <i class="fas fa-plus text-sm group-hover:rotate-45 transition-transform duration-300"></i>
-                    </span>
-                </div>
-            </article>
-
-        </div>
-
-        <!-- View All Button -->
-        <div class="text-center mt-20">
-            <a href="./projects.html"
-                class="inline-block px-8 py-3 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all text-xs font-bold tracking-widest uppercase hoverable magnetic-btn focus:outline-none">
-                VIEW ALL ARCHIVES
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <section id="writing" class="section-spy py-24 bg-slate-50 dark:bg-[#080808]">
@@ -919,14 +1032,14 @@
                         Whether you have a project in mind or just want to say hello, my inbox is always open.
                     </p>
                     <div class="space-y-4 text-center lg:text-left block reveal-on-scroll delay-200">
-                    <div class="flex items-center gap-4 text-slate-600 dark:text-slate-400">
-        <i class="fas fa-phone text-primary w-6"></i>
-        <span>+92 325 3548990</span>
-    </div>
-    <div class="flex items-center gap-4 text-slate-600 dark:text-slate-400">
-        <i class="fab fa-github text-primary w-6"></i>
-        <span>Ahmed-Qureshi-dev</span>
-    </div>
+                        <div class="flex items-center gap-4 text-slate-600 dark:text-slate-400">
+                            <i class="fas fa-phone text-primary w-6"></i>
+                            <span>+92 325 3548990</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600 dark:text-slate-400">
+                            <i class="fab fa-github text-primary w-6"></i>
+                            <span>Ahmed-Qureshi-dev</span>
+                        </div>
                         <div class="flex items-center gap-4 text-slate-600 dark:text-slate-400">
                             <i class="fas fa-envelope text-primary w-6"></i>
                             <span>ahmedqureshi6120@gmail.com</span>
@@ -1040,16 +1153,18 @@
                                             class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">HTML</span>
                                         <span
                                             class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">CSS</span>
-                                            <span
+                                        <span
                                             class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">Bootstrap</span>
                                         <span
                                             class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">JavaScript</span>
-                                            <span
-                                            class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">Firebase</span>
-                                            <span
-                                            class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">Tailwind CSS</span>
                                         <span
-                                            class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">React JS</span>    
+                                            class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">Firebase</span>
+                                        <span
+                                            class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">Tailwind
+                                            CSS</span>
+                                        <span
+                                            class="px-3 py-1 bg-slate-100 dark:bg-white/10 rounded-full text-xs font-medium text-slate-600 dark:text-slate-300">React
+                                            JS</span>
                                     </div>
                                 </div>
                                 <div>

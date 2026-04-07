@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ahmed Qureshi - Frontend Developer Portfolio</title>
+    <link>https://ahmed-qureshi-three.vercel.app/</link>
+    <description>Frontend Developer specializing in React, HTML, CSS, and JavaScript</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://ahmed-qureshi-three.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Latest Projects - Ahmed Qureshi Portfolio</title>
+      <link>https://ahmed-qureshi-three.vercel.app/projects</link>
+      <description>Check out my latest web development projects built with React, HTML, CSS, and JavaScript</description>
+      <pubDate>Mon, 07 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://ahmed-qureshi-three.vercel.app/projects</guid>
+      <author>Ahmed Qureshi</author>
+    </item>
+
+    <item>
+      <title>About Me - Frontend Developer</title>
+      <link>https://ahmed-qureshi-three.vercel.app/</link>
+      <description>Learn about Ahmed Qureshi, a passionate Frontend Developer with expertise in modern web technologies</description>
+      <pubDate>Mon, 07 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://ahmed-qureshi-three.vercel.app/about</guid>
+      <author>Ahmed Qureshi</author>
+    </item>
+
+    <item>
+      <title>Certifications - Ahmed Qureshi</title>
+      <link>https://ahmed-qureshi-three.vercel.app/certifications</link>
+      <description>Professional certifications and credentials in web development and frontend technologies</description>
+      <pubDate>Mon, 07 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://ahmed-qureshi-three.vercel.app/certifications</guid>
+      <author>Ahmed Qureshi</author>
+    </item>
+  </channel>
+</rss>

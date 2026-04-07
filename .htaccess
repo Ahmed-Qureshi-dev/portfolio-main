@@ -1,0 +1,44 @@
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache control
+<IfModule mod_headers.c>
+  # HTML files - no cache
+  <FilesMatch "\.html$">
+    Header set Cache-Control "max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # CSS and JavaScript files - 1 year cache
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Images - 1 month cache
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "max-age=2592000"
+  </FilesMatch>
+
+  # Fonts - 1 year cache
+  <FilesMatch "\.(woff|woff2|ttf|eot|otf)$">
+    Header set Cache-Control "max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Security headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "DENY"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 404 Error Handling
+ErrorDocument 404 /404.html
+
+# Remove file extensions
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^\.]+)$ $1.html [NC, L]
+</IfModule>

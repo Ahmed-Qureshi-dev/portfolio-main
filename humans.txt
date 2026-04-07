@@ -1,0 +1,19 @@
+/* TEAM */
+Name: Ahmed Qureshi
+Title: Frontend Developer
+Website: https://ahmed-qureshi-three.vercel.app/
+LinkedIn: https://www.linkedin.com/in/ahmedqureshidev/
+Email: contact@ahmedqureshi.dev
+
+/* SITE */
+Language: en-US
+Last Updated: 2026-04-07
+Standards: HTML5, CSS3, JavaScript
+Components: React, Node.js, Express
+CMS: Static HTML/CSS/JavaScript
+Hosting: Vercel
+
+/* SOCIAL */
+LinkedIn: https://www.linkedin.com/in/ahmedqureshidev/
+GitHub: https://github.com/
+Twitter: https://twitter.com/

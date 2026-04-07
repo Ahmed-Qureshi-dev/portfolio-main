@@ -1,0 +1,40 @@
+{
+  "name": "Ahmed Qureshi - Frontend Developer Portfolio",
+  "short_name": "Ahmed Qureshi",
+  "description": "Frontend Developer specializing in React, HTML, CSS, and JavaScript",
+  "start_url": "https://ahmed-qureshi-three.vercel.app/",
+  "scope": "https://ahmed-qureshi-three.vercel.app/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/fav.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/fav.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/me.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "business"],
+  "developers": [
+    {
+      "name": "Ahmed Qureshi",
+      "url": "https://ahmed-qureshi-three.vercel.app/",
+      "email": "contact@ahmedqureshi.dev"
+    }
+  ]
+}
