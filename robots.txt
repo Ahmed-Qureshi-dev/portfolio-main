@@ -20,5 +20,6 @@ Crawl-delay: 1
 Sitemap: https://ahmed-qureshi-three.vercel.app/sitemap.xml
 Sitemap: https://ahmed-qureshi-three.vercel.app/rss.xml
 
+
 # Site-specific rules
 Request-rate: 30/1m

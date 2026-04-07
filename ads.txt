@@ -1,6 +1,5 @@
 # Ads.txt for Ahmed Qureshi Portfolio
 # This is a placeholder ads.txt file
 # Add your ad network information here if you monetize this site
-
 # Format: seller_account_id, seller_account_type, seller_name, cert_authority_id
 # Example: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

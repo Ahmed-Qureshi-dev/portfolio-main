@@ -15,5 +15,5 @@ Hosting: Vercel
 
 /* SOCIAL */
 LinkedIn: https://www.linkedin.com/in/ahmedqureshidev/
-GitHub: https://github.com/
+GitHub: https://github.com/Ahmed-Qureshi-dev
 Twitter: https://twitter.com/

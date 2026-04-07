@@ -35,6 +35,7 @@
 # 404 Error Handling
 ErrorDocument 404 /404.html
 
+
 # Remove file extensions
 <IfModule mod_rewrite.c>
   RewriteEngine On
