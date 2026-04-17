@@ -49,4 +49,19 @@
         <priority>0.6</priority>
     </url>
 
+
+
+<url>
+  <loc>https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf</loc>
+  <lastmod>2026-04-17</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://ahmed-qureshi-three.vercel.app/me.png</loc>
+  <lastmod>2026-04-17</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 </urlset>

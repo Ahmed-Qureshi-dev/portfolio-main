@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
+
+
 <head>
 
     <!-- ═══════════════════════════════════════════
          SEO STRUCTURED DATA (JSON-LD)
-         Connects portfolio ↔ LinkedIn ↔ GitHub
+         Connects portfolio ↔ LinkedIn ↔ GitHub ↔ CV
     ═══════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
@@ -15,6 +18,7 @@
         "jobTitle": "MERN Stack Developer",
         "description": "MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. Building clean UIs and full-stack real-world web projects.",
         "email": "codexahmed99@gmail.com",
+        "image": "https://ahmed-qureshi-three.vercel.app/me.png",
         "knowsAbout": [
             "React JS", "Node.js", "Express JS", "MongoDB", "Next.js",
             "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap",
@@ -28,13 +32,22 @@
             "addressCountry": "PK"
         },
         "sameAs": [
-            " https://github.com/Ahmed-Qureshi-dev",
-            "https://www.linkedin.com/in/ahmedqureshidev/",
             "https://github.com/Ahmed-Qureshi-dev",
+            "https://www.linkedin.com/in/ahmedqureshidev/",
             "https://www.tiktok.com/@codexahmed"
-        ]
+        ],
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Ahmed Qureshi — MERN Stack Developer CV",
+            "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf"
+        }
     }
     </script>
+
+    <!-- CV / Resume — indexed by search engines -->
+    <link rel="alternate" type="application/pdf"
+          title="Ahmed Qureshi — CV / Resume"
+          href="/Ahmed%20Qureshi%20Cv.pdf">
 
     <!-- ═══════════════════════════════════════════
          CHARSET & VIEWPORT
@@ -51,7 +64,7 @@
         content="Ahmed Qureshi is a MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. View projects, portfolio, and hire for full-stack web development.">
 
     <meta name="keywords"
-        content="Ahmed Qureshi, MERN Stack Developer Karachi, MERN Stack Developer Pakistan, React JS Developer Pakistan, Node.js Developer Karachi, MongoDB Developer, Express JS Developer, Full Stack Developer Pakistan, Next.js Developer, Web Developer Portfolio, Hire MERN Stack Developer, JavaScript Developer Karachi, HTML CSS Developer, Bootstrap Developer, Figma UI Developer, ahmed qureshi dev, codexahmed, CODE-X, Frontend Developer Pakistan">
+        content="Ahmed Qureshi, MERN Stack Developer Karachi, MERN Stack Developer Pakistan, React JS Developer Pakistan, Node.js Developer Karachi, MongoDB Developer, Express JS Developer, Full Stack Developer Pakistan, Next.js Developer, Web Developer Portfolio, Hire MERN Stack Developer, JavaScript Developer Karachi, HTML CSS Developer, Bootstrap Developer, Figma UI Developer, ahmed qureshi dev, codexahmed, CODE-X, Frontend Developer Pakistan, Ahmed Qureshi CV, Ahmed Qureshi Resume">
 
     <meta name="author" content="Ahmed Qureshi">
     <meta name="copyright" content="© 2026 Ahmed Qureshi. All rights reserved.">
@@ -70,37 +83,36 @@
     <meta property="og:type"        content="website">
     <meta property="og:site_name"   content="Ahmed Qureshi | MERN Stack Developer">
     <meta property="og:title"       content="Ahmed Qureshi | MERN Stack Developer — React, Node.js, MongoDB, Express">
-    <meta property="og:description" content="MERN Stack Developer based in Karachi, Pakistan. Specializing in React JS, Node.js, Express, and MongoDB. View my portfolio and projects.">
+    <meta property="og:description" content="MERN Stack Developer based in Karachi, Pakistan. Specializing in React JS, Node.js, Express, and MongoDB. View my portfolio, projects, and download CV.">
     <meta property="og:url"         content="https://ahmed-qureshi-three.vercel.app/">
     <meta property="og:image"       content="https://ahmed-qureshi-three.vercel.app/me.png">
     <meta property="og:image:width"  content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt"   content="Ahmed Qureshi — Frontend Developer">
+    <meta property="og:image:alt"   content="Ahmed Qureshi — MERN Stack Developer, Karachi">
     <meta property="og:locale"      content="en_US">
 
     <!-- ═══════════════════════════════════════════
          TWITTER / X CARD
-         (No Twitter/X account — tags kept minimal
-          for cross-platform card rendering)
     ═══════════════════════════════════════════ -->
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="Ahmed Qureshi | MERN Stack Developer — React, Node.js, MongoDB, Express">
     <meta name="twitter:description" content="MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB.">
     <meta name="twitter:image"       content="https://ahmed-qureshi-three.vercel.app/me.png">
-    <meta name="twitter:image:alt"   content="Ahmed Qureshi — Frontend Developer">
+    <meta name="twitter:image:alt"   content="Ahmed Qureshi — MERN Stack Developer">
 
     <!-- ═══════════════════════════════════════════
          FAVICON
     ═══════════════════════════════════════════ -->
-    <link rel="icon"              href="/fav.ico" type="image/x-icon">
-    <link rel="shortcut icon"     href="/fav.ico" type="image/x-icon">
-    <link rel="apple-touch-icon"  href="/fav.ico">
-    <meta name="msapplication-TileImage" content="/fav.ico">
+    <link rel="icon"              href="/fa.ico" type="image/x-icon">
+    <link rel="shortcut icon"     href="/fa.ico" type="image/x-icon">
+    <link rel="apple-touch-icon"  href="/fa.ico">
+    <meta name="msapplication-TileImage" content="/fa.ico">
 
     <!-- ═══════════════════════════════════════════
          PERFORMANCE — PRELOAD CRITICAL ASSETS
     ═══════════════════════════════════════════ -->
     <link rel="preload" as="image" href="/me.png">
+    <link rel="preload" as="fetch" href="/Ahmed%20Qureshi%20Cv.pdf" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -181,7 +193,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
-
 <body
     class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 selection:bg-primary selection:text-white overflow-x-hidden">
 
@@ -309,7 +320,7 @@
                             <div
                                 class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
                             </div>
-                            <a href="./All Certificates Pdf/Mudassir Shaikh Cv.pdf" download
+                            <a href="All Certificates Pdf/Ahmed Qureshi Cv.pdf" download
                                 class="group relative px-8 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold overflow-hidden hover:scale-[1.02] transition-transform shadow-xl shadow-primary/10 hoverable magnetic-btn focus:outline-none"
                                 target="_blank">
                                 <i class="fas fa-download text-sm animate-bounce"></i>
@@ -341,7 +352,7 @@
 
                     <div
                         class="hero-profile-img hero-image-glow relative w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-white/10 shadow-2xl animate-[float_6s_ease-in-out_infinite] z-10 group cursor-pointer hoverable magnetic-btn">
-                        <img src="images/me-bg.png" alt="Mudassir" width="800" height="800"
+                        <img src="images/me-removebg-preview.png" alt="Ahmed Qureshi" width="800" height="800"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     </div>
                 </div>

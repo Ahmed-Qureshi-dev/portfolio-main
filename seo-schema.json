@@ -1,55 +1,83 @@
 {
-  "@context": "https://schema.org/",
-  "@type": "PersonPosting",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Person",
       "@id": "https://ahmed-qureshi-three.vercel.app/#person",
       "name": "Ahmed Qureshi",
       "url": "https://ahmed-qureshi-three.vercel.app/",
+      "email": "codexahmed99@gmail.com",
+      "image": "https://ahmed-qureshi-three.vercel.app/me.png",
+      "jobTitle": "MERN Stack Developer",
+      "description": "MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. Building clean UIs and full-stack real-world web projects.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "addressCountry": "PK"
+      },
+      "knowsAbout": [
+        "React JS", "Node.js", "Express JS", "MongoDB", "Next.js",
+        "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap",
+        "Figma", "Responsive Design", "Full Stack Development",
+        "Frontend Development", "REST APIs", "Vercel", "Netlify"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Ahmed Qureshi — MERN Stack Developer CV",
+        "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Aurelia Agency"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/ahmedqureshidev/",
         "https://github.com/Ahmed-Qureshi-dev",
         "https://www.tiktok.com/@codexahmed"
-      ],
-      "jobTitle": "Frontend Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      },
-      "image": "https://ahmed-qureshi-three.vercel.app/me.png",
-      "description": "Frontend Developer specializing in React, HTML, CSS, and JavaScript with expertise in building modern web applications."
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://ahmed-qureshi-three.vercel.app/#website",
       "url": "https://ahmed-qureshi-three.vercel.app/",
-      "name": "Ahmed Qureshi - Frontend Developer Portfolio",
-      "description": "Portfolio of Ahmed Qureshi, a Frontend Developer specializing in React, HTML, CSS, and JavaScript.",
+      "name": "Ahmed Qureshi — MERN Stack Developer Portfolio",
+      "description": "Portfolio of Ahmed Qureshi, a MERN Stack Developer specializing in React JS, Node.js, Express, and MongoDB.",
       "author": {
         "@id": "https://ahmed-qureshi-three.vercel.app/#person"
       },
       "creator": {
         "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ahmed-qureshi-three.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     },
     {
       "@type": "ProfilePage",
-      "url": "https://www.linkedin.com/in/ahmedqureshidev/",
-      "name": "Ahmed Qureshi LinkedIn Profile",
-      "description": "Connect with Ahmed Qureshi on LinkedIn"
+      "@id": "https://ahmed-qureshi-three.vercel.app/#profilepage",
+      "url": "https://ahmed-qureshi-three.vercel.app/",
+      "name": "Ahmed Qureshi — Frontend Developer Portfolio",
+      "description": "Official portfolio of Ahmed Qureshi, MERN Stack Developer based in Karachi, Pakistan.",
+      "mainEntity": {
+        "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+      },
+      "about": {
+        "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+      }
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Ahmed Qureshi",
-      "url": "https://ahmed-qureshi-three.vercel.app/",
-      "image": "https://ahmed-qureshi-three.vercel.app/me.png",
-      "description": "Frontend Developer - Web Development Services",
-      "priceRange": "$$$",
-      "sameAs": [
-        "https://www.linkedin.com/in/ahmedqureshidev/",
-        "https://ahmed-qureshi-three.vercel.app/"
-      ]
+      "@type": "WebPage",
+      "@id": "https://ahmed-qureshi-three.vercel.app/#cv",
+      "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf",
+      "name": "Ahmed Qureshi CV — MERN Stack Developer Resume",
+      "description": "Download the CV / Resume of Ahmed Qureshi, MERN Stack Developer from Karachi, Pakistan.",
+      "author": {
+        "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+      },
+      "encodingFormat": "application/pdf"
     }
   ]
 }

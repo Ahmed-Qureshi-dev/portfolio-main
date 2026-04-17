@@ -3,23 +3,28 @@ User-agent: *
 Allow: /
 Allow: /manifest.json
 Allow: /rss.xml
+Allow: /Ahmed%20Qureshi%20Cv.pdf
+Allow: /me.png
 Disallow: /.well-known/
 Disallow: /google75bc452d440f03ff.html
 
 # Specific settings for Google
 User-agent: Googlebot
 Allow: /
+Allow: /Ahmed%20Qureshi%20Cv.pdf
+Allow: /me.png
 Crawl-delay: 0
 
 # Specific settings for Bing
 User-agent: Bingbot
 Allow: /
+Allow: /Ahmed%20Qureshi%20Cv.pdf
+Allow: /me.png
 Crawl-delay: 1
 
 # Sitemap URLs
 Sitemap: https://ahmed-qureshi-three.vercel.app/sitemap.xml
 Sitemap: https://ahmed-qureshi-three.vercel.app/rss.xml
-
 
 # Site-specific rules
 Request-rate: 30/1m

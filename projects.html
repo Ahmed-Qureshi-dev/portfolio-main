@@ -5,36 +5,73 @@
 
     <!-- ═══════════════════════════════════════════
          SEO STRUCTURED DATA (JSON-LD)
-         Connects portfolio ↔ LinkedIn ↔ GitHub
+         Connects portfolio ↔ LinkedIn ↔ GitHub ↔ CV
     ═══════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ahmed Qureshi",
-        "url": "https://ahmed-qureshi-three.vercel.app/",
-        "jobTitle": "MERN Stack Developer",
-        "description": "MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. Building clean UIs and full-stack real-world web projects.",
-        "email": "codexahmed99@gmail.com",
-        "knowsAbout": [
-            "React JS", "Node.js", "Express JS", "MongoDB", "Next.js",
-            "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap",
-            "Figma", "Responsive Design", "Full Stack Development",
-            "Frontend Development", "REST APIs", "Vercel", "Netlify"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Karachi",
-            "addressRegion": "Sindh",
-            "addressCountry": "PK"
-        },
-        "sameAs": [
-            "https://www.linkedin.com/in/ahmedqureshidev/",
-            "https://github.com/Ahmed-Qureshi-dev",
-            "https://www.tiktok.com/@codexahmed"
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://ahmed-qureshi-three.vercel.app/#person",
+                "name": "Ahmed Qureshi",
+                "url": "https://ahmed-qureshi-three.vercel.app/",
+                "jobTitle": "MERN Stack Developer",
+                "description": "MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. Building clean UIs and full-stack real-world web projects.",
+                "email": "codexahmed99@gmail.com",
+                "image": "https://ahmed-qureshi-three.vercel.app/me.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Karachi",
+                    "addressRegion": "Sindh",
+                    "addressCountry": "PK"
+                },
+                "hasCredential": {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Ahmed Qureshi — MERN Stack Developer CV",
+                    "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf"
+                },
+                "sameAs": [
+                    "https://www.linkedin.com/in/ahmedqureshidev/",
+                    "https://github.com/Ahmed-Qureshi-dev",
+                    "https://www.tiktok.com/@codexahmed"
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://ahmed-qureshi-three.vercel.app/projects.html#webpage",
+                "url": "https://ahmed-qureshi-three.vercel.app/projects.html",
+                "name": "Projects | Ahmed Qureshi — MERN Stack Developer Karachi",
+                "description": "Explore real-world projects by Ahmed Qureshi, a MERN Stack Developer from Karachi, Pakistan. Built with React JS, Node.js, MongoDB, Express, HTML, CSS, and JavaScript.",
+                "author": {
+                    "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+                },
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://ahmed-qureshi-three.vercel.app/#website",
+                    "url": "https://ahmed-qureshi-three.vercel.app/",
+                    "name": "Ahmed Qureshi — MERN Stack Developer Portfolio"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://ahmed-qureshi-three.vercel.app/#cv",
+                "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf",
+                "name": "Ahmed Qureshi CV — MERN Stack Developer Resume",
+                "description": "Download the CV / Resume of Ahmed Qureshi, MERN Stack Developer from Karachi, Pakistan.",
+                "author": {
+                    "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+                },
+                "encodingFormat": "application/pdf"
+            }
         ]
     }
     </script>
+
+    <!-- CV / Resume — indexed by search engines -->
+    <link rel="alternate" type="application/pdf"
+          title="Ahmed Qureshi — CV / Resume"
+          href="/Ahmed%20Qureshi%20Cv.pdf">
 
     <!-- ═══════════════════════════════════════════
          CHARSET & VIEWPORT
@@ -56,7 +93,7 @@
         content="Explore real-world projects by Ahmed Qureshi, a MERN Stack Developer from Karachi, Pakistan. Built with React JS, Node.js, MongoDB, Express, HTML, CSS, and JavaScript.">
 
     <meta name="keywords"
-        content="Ahmed Qureshi Projects, MERN Stack Projects, React JS Projects Pakistan, Node.js Projects, Full Stack Developer Portfolio, Web Developer Projects Karachi, JavaScript Projects, HTML CSS Projects, ahmed qureshi dev, codexahmed, CODE-X">
+        content="Ahmed Qureshi Projects, MERN Stack Projects, React JS Projects Pakistan, Node.js Projects, Full Stack Developer Portfolio, Web Developer Projects Karachi, JavaScript Projects, HTML CSS Projects, ahmed qureshi dev, codexahmed, CODE-X, Ahmed Qureshi CV, Ahmed Qureshi Resume">
 
     <meta name="author" content="Ahmed Qureshi">
     <meta name="copyright" content="© 2026 Ahmed Qureshi. All rights reserved.">
@@ -80,27 +117,25 @@
     <meta property="og:image"        content="https://ahmed-qureshi-three.vercel.app/me.png">
     <meta property="og:image:width"  content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt"    content="Ahmed Qureshi — MERN Stack Developer Projects">
+    <meta property="og:image:alt"    content="Ahmed Qureshi — MERN Stack Developer, Karachi">
     <meta property="og:locale"       content="en_US">
 
     <!-- ═══════════════════════════════════════════
          TWITTER / X CARD
-         (No Twitter/X account — kept for WhatsApp
-          & Discord card rendering)
     ═══════════════════════════════════════════ -->
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="Projects | Ahmed Qureshi — MERN Stack Developer Karachi">
     <meta name="twitter:description" content="Real-world projects built with React JS, Node.js, MongoDB, Express, HTML, CSS & JavaScript.">
     <meta name="twitter:image"       content="https://ahmed-qureshi-three.vercel.app/me.png">
-    <meta name="twitter:image:alt"   content="Ahmed Qureshi — MERN Stack Developer Projects">
+    <meta name="twitter:image:alt"   content="Ahmed Qureshi — MERN Stack Developer">
 
     <!-- ═══════════════════════════════════════════
          FAVICON
     ═══════════════════════════════════════════ -->
-    <link rel="icon"             href="/fav.ico" type="image/x-icon">
-    <link rel="shortcut icon"    href="/fav.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/fav.ico">
-    <meta name="msapplication-TileImage" content="/fav.ico">
+    <link rel="icon"             href="/fa.ico" type="image/x-icon">
+    <link rel="shortcut icon"    href="/fa.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/fa.ico">
+    <meta name="msapplication-TileImage" content="/fa.ico">
 
     <!-- ═══════════════════════════════════════════
          DARK MODE INIT
@@ -118,6 +153,7 @@
          PERFORMANCE — PRELOAD CRITICAL ASSETS
     ═══════════════════════════════════════════ -->
     <link rel="preload" as="image" href="/me.png">
+    <link rel="preload" as="fetch" href="/Ahmed%20Qureshi%20Cv.pdf" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -313,7 +349,6 @@
     <link rel="stylesheet" href="styles.css">
 
 </head>
-
 <body class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 overflow-x-hidden font-sans">
 
     <!-- Noise + Grid -->
