@@ -211,15 +211,18 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-overlay fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none">
-        <a href="index.html" class="mobile-link font-display text-4xl font-bold">Home</a>
-        <a href="index.html#about" class="mobile-link font-display text-4xl font-bold">About</a>
-        <a href="projects.html" class="mobile-link font-display text-4xl font-bold">Projects</a>
-        <a href="certificates.html" class="mobile-link font-display text-4xl font-bold active">Certificates</a>
-        <a href="index.html#contact" class="mobile-link font-display text-4xl font-bold">Contact</a>
-        <button id="close-menu" class="absolute top-8 right-8 w-12 h-12 rounded-xl flex items-center justify-center theme-btn">
-            <i class="fas fa-times text-xl"></i>
-        </button>
+    <div id="mobile-menu" class="mobile-overlay fixed inset-0 z-40">
+        <div class="mobile-backdrop absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div class="mobile-drawer relative ml-auto w-4/5 max-w-sm h-full bg-surface border-l flex flex-col justify-center px-12 gap-8 shadow-2xl" style="border-color:var(--border)">
+            <button id="close-menu" class="absolute top-8 right-8 w-12 h-12 rounded-xl flex items-center justify-center theme-btn z-50">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <a href="index.html" class="mobile-link font-display text-3xl font-bold">Home</a>
+            <a href="index.html#about" class="mobile-link font-display text-3xl font-bold">About</a>
+            <a href="projects.html" class="mobile-link font-display text-3xl font-bold">Projects</a>
+            <a href="certificates.html" class="mobile-link font-display text-3xl font-bold active">Certificates</a>
+            <a href="index.html#contact" class="mobile-link font-display text-3xl font-bold">Contact</a>
+        </div>
     </div>
 
     <!-- PAGE HEADER -->

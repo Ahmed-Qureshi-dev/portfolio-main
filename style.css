@@ -131,14 +131,49 @@ html:not(.dark) .light-icon { display: block; }
 
 /* ─── MOBILE MENU ─────────────────────────────────── */
 .mobile-overlay {
-    background: var(--bg);
-    transition: opacity 0.3s ease;
+    pointer-events: none;
+    visibility: hidden;
+}
+.mobile-overlay.active {
+    pointer-events: auto;
+    visibility: visible;
+}
+.mobile-backdrop {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.mobile-overlay.active .mobile-backdrop {
+    opacity: 1;
+}
+.mobile-drawer {
+    background: rgba(var(--surface-rgb), 0.98);
+    backdrop-filter: blur(20px);
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.8, 0, 0.2, 1);
+}
+.mobile-overlay.active .mobile-drawer {
+    transform: translateX(0);
 }
 .mobile-link {
     color: var(--fg);
-    transition: color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.8, 0, 0.2, 1);
+    transform: translateX(30px);
+    opacity: 0;
 }
-.mobile-link:hover { color: var(--accent); }
+.mobile-overlay.active .mobile-link {
+    transform: translateX(0);
+    opacity: 1;
+}
+.mobile-overlay.active .mobile-link:nth-child(2) { transition-delay: 0.1s; }
+.mobile-overlay.active .mobile-link:nth-child(3) { transition-delay: 0.15s; }
+.mobile-overlay.active .mobile-link:nth-child(4) { transition-delay: 0.2s; }
+.mobile-overlay.active .mobile-link:nth-child(5) { transition-delay: 0.25s; }
+.mobile-overlay.active .mobile-link:nth-child(6) { transition-delay: 0.3s; }
+
+.mobile-link:hover { 
+    color: var(--accent); 
+    transform: translateX(5px);
+}
 
 /* ─── HERO SECTION ─────────────────────────────────── */
 

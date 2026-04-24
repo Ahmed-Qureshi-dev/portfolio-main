@@ -73,15 +73,13 @@ const mobileLinks = document.querySelectorAll('.mobile-link');
 
 function openMobileMenu() {
     if (!mobileMenu) return;
-    mobileMenu.style.opacity = '1';
-    mobileMenu.style.pointerEvents = 'auto';
+    mobileMenu.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function closeMobileMenuFn() {
     if (!mobileMenu) return;
-    mobileMenu.style.opacity = '0';
-    mobileMenu.style.pointerEvents = 'none';
+    mobileMenu.classList.remove('active');
     document.body.style.overflow = '';
 }
 
