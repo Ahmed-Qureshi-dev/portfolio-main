@@ -1,5 +1,6 @@
 {
     "git.enableSmartCommit": true,
     "git.terminalGitEditor": false,
-    "git.enableCommitSigning": false
+    "git.enableCommitSigning": false,
+    "liveServer.settings.port": 5501
 }
