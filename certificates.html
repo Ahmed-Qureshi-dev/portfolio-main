@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <!-- ═══════════════════════════════════════════
+         SEO STRUCTURED DATA (JSON-LD)
+         Connects portfolio ↔ LinkedIn ↔ GitHub ↔ CV
+    ═══════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://ahmed-qureshi-three.vercel.app/#person",
+                "name": "Ahmed Qureshi",
+                "url": "https://ahmed-qureshi-three.vercel.app/",
+                "jobTitle": "MERN Stack Developer",
+                "description": "Ahmed Qureshi | MERN Stack Developer | Cisco Certified | 20+ Projects | AI-Powered Web Solutions | Working with Global Clients",
+                "email": "codexahmed99@gmail.com",
+                "image": "https://ahmed-qureshi-three.vercel.app/me.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Karachi",
+                    "addressRegion": "Sindh",
+                    "addressCountry": "PK"
+                },
+                "hasCredential": [
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "JavaScript Programming Certification",
+                        "url": "https://ahmed-qureshi-three.vercel.app/All%20Certificates%20Pdf/Mudassir%20JS%20Certificate.pdf"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "CSS Styling & Responsive Design Certification",
+                        "url": "https://ahmed-qureshi-three.vercel.app/All%20Certificates%20Pdf/Mudassir%20CSS%20Certificate.pdf"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "HTML5 & Semantic Web Structure Certification",
+                        "url": "https://ahmed-qureshi-three.vercel.app/All%20Certificates%20Pdf/Mudassir%20HTML%20Certificate.pdf"
+                    },
+                    {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "Digital Marketing & SEO Certification",
+                        "url": "https://ahmed-qureshi-three.vercel.app/All%20Certificates%20Pdf/marketing%20certificate.pdf"
+                    }
+                ],
+                "sameAs": [
+                    "https://www.linkedin.com/in/ahmedqureshidev/",
+                    "https://github.com/Ahmed-Qureshi-dev",
+                    "https://www.tiktok.com/@codexahmed"
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://ahmed-qureshi-three.vercel.app/certificates.html#webpage",
+                "url": "https://ahmed-qureshi-three.vercel.app/certificates.html",
+                "name": "Professional Certifications | Ahmed Qureshi — MERN Stack Developer",
+                "description": "Ahmed Qureshi | MERN Stack Developer | Cisco Certified | 20+ Projects | AI-Powered Web Solutions | Working with Global Clients",
+                "author": {
+                    "@id": "https://ahmed-qureshi-three.vercel.app/#person"
+                },
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://ahmed-qureshi-three.vercel.app/#website",
+                    "url": "https://ahmed-qureshi-three.vercel.app/",
+                    "name": "Ahmed Qureshi Portfolio"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ahmed-qureshi-three.vercel.app/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Certifications",
+        "item": "https://ahmed-qureshi-three.vercel.app/certificates.html"
+      }]
+    }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications | Ahmed Qureshi — MERN Stack Developer</title>
+
+    <meta name="description"
+        content="Ahmed Qureshi | MERN Stack Developer | Cisco Certified | 20+ Projects | AI-Powered Web Solutions | Working with Global Clients">
+    <meta name="author" content="Ahmed Qureshi">
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#0a0f1e">
+    <link rel="canonical" href="https://ahmed-qureshi-three.vercel.app/certificates.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Certifications | Ahmed Qureshi — MERN Stack Developer">
+    <meta property="og:description" content="Ahmed Qureshi | MERN Stack Developer | Cisco Certified | 20+ Projects">
+    <meta property="og:url" content="https://ahmed-qureshi-three.vercel.app/certificates.html">
+    <meta property="og:image" content="https://ahmed-qureshi-three.vercel.app/me.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                fontFamily: {
+                    sans: ['"DM Sans"', 'sans-serif'],
+                    display: ['"Syne"', 'sans-serif'],
+                },
+                extend: {
+                    colors: {
+                        accent: 'var(--accent)',
+                    }
+                }
+            }
+        }
+
+        // Theme init
+        (function() {
+            const saved = localStorage.getItem('aq-theme') || 'dark';
+            if (saved === 'light') {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .cert-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border);
+            background-color: var(--surface);
+        }
+        .cert-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 20px var(--accent-dim);
+        }
+    </style>
+</head>
+
+<body class="transition-colors duration-500 overflow-x-hidden">
+
+    <img src="/me.png" alt="Ahmed Qureshi - MERN Stack Developer" style="display:none;" loading="eager">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center">
+        <div class="preloader-inner flex flex-col items-center gap-6">
+            <div class="relative w-20 h-20">
+                <svg class="w-20 h-20 animate-spin" viewBox="0 0 80 80">
+                    <circle cx="40" cy="40" r="36" fill="none" stroke-width="2" stroke="rgba(var(--accent-rgb),0.15)"/>
+                    <circle cx="40" cy="40" r="36" fill="none" stroke-width="2" stroke="var(--accent)" stroke-dasharray="60 167" stroke-linecap="round"/>
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="font-display font-bold text-lg" style="color:var(--accent)">AQ</span>
+                </div>
+            </div>
+            <p class="text-xs tracking-[0.4em] uppercase font-display" style="color:var(--muted)">Initializing...</p>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         NAV
+    ══════════════════════════════════════ -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-5">
+        <nav id="main-nav" class="nav-bar w-full max-w-5xl flex items-center justify-between px-6 py-3.5 rounded-2xl">
+            <a href="index.html" class="font-display font-bold text-lg tracking-tight" style="color:var(--fg)">
+                AQ<span style="color:var(--accent)">.dev</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="certificates.html" class="nav-link active">Certificates</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#contact" class="hire-btn hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-bold font-display">
+                    Hire Me <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+                <button id="theme-toggle" aria-label="Toggle Theme" class="theme-btn w-10 h-10 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon hidden"></i>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden w-10 h-10 rounded-xl flex items-center justify-center theme-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-overlay fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none">
+        <a href="index.html" class="mobile-link font-display text-4xl font-bold">Home</a>
+        <a href="index.html#about" class="mobile-link font-display text-4xl font-bold">About</a>
+        <a href="projects.html" class="mobile-link font-display text-4xl font-bold">Projects</a>
+        <a href="certificates.html" class="mobile-link font-display text-4xl font-bold active">Certificates</a>
+        <a href="index.html#contact" class="mobile-link font-display text-4xl font-bold">Contact</a>
+        <button id="close-menu" class="absolute top-8 right-8 w-12 h-12 rounded-xl flex items-center justify-center theme-btn">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="relative pt-40 pb-20 px-6 text-center z-10">
+        <div class="max-w-4xl mx-auto">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm font-medium mb-8 transition-colors group reveal-on-scroll">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+                Back to Home
+            </a>
+            <div class="reveal-on-scroll">
+                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest mb-6" style="background:var(--surface); color:var(--muted)">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block"></span>
+                    Verified Credentials
+                </span>
+            </div>
+            <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-6 reveal-on-scroll" style="color:var(--fg)">
+                My <span class="grad-text">Certificates</span><span style="color:var(--accent)">.</span>
+            </h1>
+            <p class="text-lg max-w-xl mx-auto reveal-on-scroll" style="color:var(--muted)">
+                A collection of professional certifications and educational milestones that validate my expertise in full-stack development, design, and digital strategy.
+            </p>
+            <div class="flex flex-wrap justify-center gap-8 mt-12 reveal-on-scroll">
+                <div class="text-center">
+                    <p class="text-3xl font-display font-bold" style="color:var(--fg)">4+</p>
+                    <p class="text-xs uppercase tracking-wider mt-1" style="color:var(--muted)">Certifications</p>
+                </div>
+                <div class="w-px h-10 bg-slate-200 dark:border-white/10 self-center hidden sm:block"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-display font-bold" style="color:var(--fg)">Cisco</p>
+                    <p class="text-xs uppercase tracking-wider mt-1" style="color:var(--muted)">Certified</p>
+                </div>
+                <div class="w-px h-10 bg-slate-200 dark:border-white/10 self-center hidden sm:block"></div>
+                <div class="text-center">
+                    <p class="text-3xl font-display font-bold" style="color:var(--fg)">100%</p>
+                    <p class="text-xs uppercase tracking-wider mt-1" style="color:var(--muted)">Verified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES GRID -->
+    <main class="relative z-10 px-6 py-12 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <article class="cert-card bg-surface rounded-3xl overflow-hidden group reveal-on-scroll">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="images/js-certificate.jpeg" alt="Ahmed Qureshi - JavaScript Certification" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Development</span>
+                            <span class="text-slate-500 text-xs font-mono">Cisco</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">JavaScript Programming</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Mastered core JavaScript principles, ES6+ syntax, and asynchronous programming logic.</p>
+                        <a href="./All Certificates Pdf/Mudassir JS Certificate.pdf" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+                            View PDF <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Certificate 2 -->
+                <article class="cert-card bg-surface rounded-3xl overflow-hidden group reveal-on-scroll">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="images/css-certificate.jpeg" alt="Ahmed Qureshi - CSS Certification" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Design</span>
+                            <span class="text-slate-500 text-xs font-mono">Cisco</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">CSS Styling & Responsive Design</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Expertise in Flexbox, CSS Grid, and building high-performance responsive layouts.</p>
+                        <a href="./All Certificates Pdf/Mudassir CSS Certificate.pdf" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+                            View PDF <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Certificate 3 -->
+                <article class="cert-card bg-surface rounded-3xl overflow-hidden group reveal-on-scroll">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="images/html-certificate.jpeg" alt="Ahmed Qureshi - HTML Certification" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Foundation</span>
+                            <span class="text-slate-500 text-xs font-mono">Cisco</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">HTML Structure & Semantics</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Deep understanding of semantic HTML tags and web accessibility standards.</p>
+                        <a href="./All Certificates Pdf/Mudassir HTML Certificate.pdf" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+                            View PDF <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Certificate 4 -->
+                <article class="cert-card bg-surface rounded-3xl overflow-hidden group reveal-on-scroll">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="./images/Marketing Certificate.png" alt="Ahmed Qureshi - Marketing Certification" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Marketing</span>
+                            <span class="text-slate-500 text-xs font-mono">Hunar</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Digital Marketing & SEO</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Skilled in SEO audits, content strategy, and digital performance marketing.</p>
+                        <a href="./All Certificates Pdf/Marketing Certificate.pdf" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-primary transition-colors">
+                            View PDF <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 reveal-on-scroll" style="border-color:var(--border)">
+            <div class="flex gap-6 text-sm">
+                <a href="https://www.linkedin.com/in/ahmedqureshidev/" class="footer-link">LinkedIn</a>
+                <a href="mailto:codexahmed99@gmail.com" class="footer-link">Email</a>
+                <a href="https://github.com/Ahmed-Qureshi-dev" class="footer-link">GitHub</a>
+            </div>
+            <p class="text-xs font-display tracking-wider" style="color:var(--muted)">© <span id="year">2026</span> Ahmed-Qureshi-Dev. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/923253548990" target="_blank" aria-label="WhatsApp"
+        class="whatsapp-fab fixed bottom-8 right-8 z-[60] w-14 h-14 rounded-xl flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group">
+        <span class="absolute inline-flex h-full w-full rounded-xl opacity-30 animate-ping" style="background:#25D366"></span>
+        <i class="fab fa-whatsapp text-3xl leading-none z-10 text-white group-hover:rotate-12 transition-transform"></i>
+    </a>
+
+    <!-- Scroll to top -->
+    <button id="scrollToTopBtn" aria-label="Scroll to Top"
+        class="scroll-top-btn fixed bottom-28 right-8 z-50 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fas fa-arrow-up text-sm"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
