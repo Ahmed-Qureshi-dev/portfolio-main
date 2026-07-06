@@ -246,7 +246,16 @@ html:not(.dark) .light-icon { display: block; }
     opacity: 0;
 }
 .hero-name:first-child { animation-delay: 0.3s; }
-.hero-name:last-child { animation-delay: 0.45s; }
+.hero-name-gradient {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.45s;
+    opacity: 0;
+    background: linear-gradient(135deg, var(--fg) 20%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* Typewriter area */
 .typewriter-wrap {
@@ -327,11 +336,18 @@ html:not(.dark) .light-icon { display: block; }
 
 /* ─── PROFILE IMAGE SHELL ───────────────────────── */
 .profile-shell {
-    width: 320px;
-    height: 320px;
+    width: 270px;
+    height: 270px;
     animation: fadeUp 1s ease forwards;
     animation-delay: 0.5s;
     opacity: 0;
+}
+
+@media (max-width: 375px) {
+    .profile-shell {
+        width: 230px;
+        height: 230px;
+    }
 }
 
 @media (min-width: 768px) {

@@ -8,8 +8,8 @@
       "url": "https://ahmed-qureshi-three.vercel.app/",
       "email": "codexahmed99@gmail.com",
       "image": "https://ahmed-qureshi-three.vercel.app/me.png",
-      "jobTitle": "MERN Stack Developer",
-      "description": "MERN Stack Developer based in Karachi, Pakistan, specializing in React JS, Node.js, Express, and MongoDB. Building clean UIs and full-stack real-world web projects.",
+      "jobTitle": "AI-Augmented Technical Generalist",
+      "description": "AI-Augmented Technical Generalist based in Karachi, Pakistan. Specializing in UI/UX, Frontend, SMM, and Digital Marketing.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Karachi",
@@ -19,12 +19,12 @@
       "knowsAbout": [
         "React JS", "Node.js", "Express JS", "MongoDB", "Next.js",
         "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap",
-        "Figma", "Responsive Design", "Full Stack Development",
+        "Figma", "Responsive Design", "AI-Augmented Workflows",
         "Frontend Development", "REST APIs", "Vercel", "Netlify"
       ],
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
-        "name": "Ahmed Qureshi — MERN Stack Developer CV",
+        "name": "Ahmed Qureshi — AI-Augmented Technical Generalist CV",
         "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf"
       },
       "worksFor": {
@@ -41,8 +41,8 @@
       "@type": "WebSite",
       "@id": "https://ahmed-qureshi-three.vercel.app/#website",
       "url": "https://ahmed-qureshi-three.vercel.app/",
-      "name": "Ahmed Qureshi — MERN Stack Developer Portfolio",
-      "description": "Portfolio of Ahmed Qureshi, a MERN Stack Developer specializing in React JS, Node.js, Express, and MongoDB.",
+      "name": "Ahmed Qureshi — AI-Augmented Technical Generalist Portfolio",
+      "description": "Portfolio of Ahmed Qureshi, an AI-Augmented Technical Generalist specializing in UI/UX, SMM, and Digital Marketing.",
       "author": {
         "@id": "https://ahmed-qureshi-three.vercel.app/#person"
       },
@@ -59,8 +59,8 @@
       "@type": "ProfilePage",
       "@id": "https://ahmed-qureshi-three.vercel.app/#profilepage",
       "url": "https://ahmed-qureshi-three.vercel.app/",
-      "name": "Ahmed Qureshi — Frontend Developer Portfolio",
-      "description": "Official portfolio of Ahmed Qureshi, MERN Stack Developer based in Karachi, Pakistan.",
+      "name": "Ahmed Qureshi — AI-Augmented Technical Generalist Portfolio",
+      "description": "Official portfolio of Ahmed Qureshi, AI-Augmented Technical Generalist based in Karachi, Pakistan.",
       "mainEntity": {
         "@id": "https://ahmed-qureshi-three.vercel.app/#person"
       },
@@ -72,8 +72,8 @@
       "@type": "WebPage",
       "@id": "https://ahmed-qureshi-three.vercel.app/#cv",
       "url": "https://ahmed-qureshi-three.vercel.app/Ahmed%20Qureshi%20Cv.pdf",
-      "name": "Ahmed Qureshi CV — MERN Stack Developer Resume",
-      "description": "Download the CV / Resume of Ahmed Qureshi, MERN Stack Developer from Karachi, Pakistan.",
+      "name": "Ahmed Qureshi CV — AI-Augmented Technical Generalist Resume",
+      "description": "Download the CV / Resume of Ahmed Qureshi, AI-Augmented Technical Generalist from Karachi, Pakistan.",
       "author": {
         "@id": "https://ahmed-qureshi-three.vercel.app/#person"
       },

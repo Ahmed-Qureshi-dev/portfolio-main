@@ -152,11 +152,11 @@ function initTypewriter() {
     if (!el) return;
 
     const words = [
-        'MERN Stack Developer',
-        'SEO Specialist',
-        'Shopify Developer',
+        'UI/UX Designer',
+        'Creative Designer',
         'Social Media Manager',
-        'UI/UX Designer'
+        'Digital Marketer',
+        'Technical Generalist'
     ];
 
     let wordIndex = 0;
