@@ -6,33 +6,19 @@
 /* ─── CSS VARIABLES ─────────────────────────────── */
 :root {
     /* DARK THEME (default) */
-    --bg: #060c1a;
-    --surface: #0d1627;
-    --surface2: #111d35;
-    --border: rgba(255,255,255,0.08);
-    --fg: #f0f4ff;
-    --muted: #7a91b8;
-    --accent: #4d80e4;
-    --accent-rgb: 77, 128, 228;
-    --accent-glow: rgba(77, 128, 228, 0.3);
-    --accent-dim: rgba(77, 128, 228, 0.12);
-    --accent-dark: #1a56db;
+    --bg: #07101f;
+    --surface: #101d31;
+    --surface2: #15243c;
+    --border: rgba(255,255,255,0.09);
+    --fg: #e7eef9;
+    --muted: #9ab2cc;
+    --accent: #4dc1d9;
+    --accent-rgb: 77, 193, 217;
+    --accent-glow: rgba(77, 193, 217, 0.26);
+    --accent-dim: rgba(77, 193, 217, 0.11);
+    --accent-dark: #3aa0ac;
 }
 
-html:not(.dark) {
-    /* LIGHT THEME */
-    --bg: #f8fafc;
-    --surface: #ffffff;
-    --surface2: #f1f5f9;
-    --border: rgba(0,0,0,0.1);
-    --fg: #020617; /* High contrast black for headings */
-    --muted: #475569; /* Darker grey for body text */
-    --accent: #2563eb; /* Vibrant blue for light mode */
-    --accent-rgb: 37, 99, 235;
-    --accent-glow: rgba(37, 99, 235, 0.2);
-    --accent-dim: rgba(37, 99, 235, 0.08);
-    --accent-dark: #1d4ed8;
-}
 
 /* ─── BASE ─────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
@@ -124,10 +110,6 @@ html:not(.dark) .nav-bar {
 }
 
 /* Hide/show theme icons */
-html.dark .light-icon { display: none; }
-html.dark .dark-icon { display: block; }
-html:not(.dark) .dark-icon { display: none; }
-html:not(.dark) .light-icon { display: block; }
 
 /* ─── MOBILE MENU ─────────────────────────────────── */
 .mobile-overlay {
@@ -176,6 +158,31 @@ html:not(.dark) .light-icon { display: block; }
 }
 
 /* ─── HERO SECTION ─────────────────────────────────── */
+
+/* Header sizing to reserve space for fixed header and ensure hero centers correctly */
+:root { --header-h: 76px; }
+header { height: var(--header-h); }
+header .nav-bar { height: 100%; display: flex; align-items: center; }
+section#home { height: 100vh; box-sizing: border-box; display: flex; align-items: center; padding-top: var(--header-h); }
+
+/* Responsive header height for smaller screens */
+@media (max-width: 768px) {
+    :root { --header-h: 96px; }
+}
+@media (max-width: 420px) {
+    :root { --header-h: 112px; }
+}
+
+/* Mobile hero tweaks */
+@media (max-width: 640px) {
+    .hero-panel { padding: 1.25rem; border-radius: 1.25rem; margin-top: 1rem; }
+    .hero-name { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+    .hero-name-gradient { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+    .hero-desc { font-size: 0.95rem; }
+    .hero-stats { gap: 0.5rem; }
+    .hero-stat-pill { padding: 0.6rem 0.8rem; }
+}
+
 
 /* Background grid */
 .hero-grid {
@@ -228,9 +235,120 @@ html:not(.dark) .light-icon { display: block; }
     50% { transform: translateY(-30px) scale(1.05); }
 }
 
+/* Hero panel */
+.hero-panel {
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.08), rgba(255,255,255,0.02));
+    border-color: rgba(var(--accent-rgb), 0.18);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+    backdrop-filter: blur(16px);
+    margin-top: 2rem;
+    padding: 1.25rem 1.75rem;
+}
+
+/* Inline profile inside hero panel */
+.profile-inline {
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 0 4px rgba(var(--accent-rgb),0.02) inset;
+}
+
+@media (max-width: 1024px) {
+    .hero-right { display: none !important; }
+}
+
+/* Rings + orbiting dot around the inline profile */
+.profile-inline {
+    position: relative;
+}
+.profile-inline::before,
+.profile-inline::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.profile-inline::before {
+    width: calc(100% + 28px);
+    height: calc(100% + 28px);
+    border: 2px solid rgba(var(--accent-rgb), 0.12);
+    animation: ringRotate 14s linear infinite;
+}
+.profile-inline::after {
+    width: calc(100% + 54px);
+    height: calc(100% + 54px);
+    border: 1px dashed rgba(var(--accent-rgb), 0.08);
+    animation: ringRotateReverse 22s linear infinite;
+}
+
+/* removed .orbit-dot (image revolver) — replaced by corner dots in .hero-orbit */
+
+@keyframes ringRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes ringRotateReverse {
+    from { transform: translate(-50%, -50%) rotate(360deg); }
+    to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+@keyframes orbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Hero-section orbiting star */
+.hero-orbit { position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+.hero-orbit .star {
+    position: absolute;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #7fb6ff 0%, var(--accent) 40%, rgba(77,128,228,0.18) 60%);
+    box-shadow: 0 0 20px rgba(77,128,228,0.95), 0 0 40px rgba(77,128,228,0.5);
+    /* start near top-left corner */
+    top: 8px; left: 8px;
+    animation: starCorners 8s cubic-bezier(.4,.0,.2,1) infinite;
+}
+
+@keyframes starCorners {
+    0%   { top: 8px; left: 8px; transform: scale(1) rotate(0deg); }
+    25%  { top: 8px; left: calc(100% - 8px); transform: scale(1.05) rotate(45deg); }
+    50%  { top: calc(100% - 8px); left: calc(100% - 8px); transform: scale(1) rotate(90deg); }
+    75%  { top: calc(100% - 8px); left: 8px; transform: scale(1.05) rotate(135deg); }
+    100% { top: 8px; left: 8px; transform: scale(1) rotate(180deg); }
+}
+
+/* subtle twinkle */
+.hero-orbit .star::after {
+    content: '';
+    position: absolute; inset: -8px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(127,182,255,0.25), transparent 40%);
+    filter: blur(6px);
+    opacity: 0.9;
+}
+
+/* adjust orbit on smaller screens */
+@media (max-width: 1024px) {
+    .hero-orbit { display: none; }
+}
+
+/* three small corner-moving dots */
+.hero-orbit .corner-dot {
+    position: absolute; width: 8px; height: 8px; border-radius: 50%;
+    background: #8fc2ff; box-shadow: 0 0 10px rgba(127,194,255,0.95);
+    z-index: 6; opacity: 0.95;
+}
+.hero-orbit .dot-1 { animation: starCorners 7.2s linear infinite; width:8px;height:8px; }
+.hero-orbit .dot-2 { animation: starCorners 9s linear infinite; width:10px;height:10px; opacity:0.9; animation-delay: -2s; }
+.hero-orbit .dot-3 { animation: starCorners 11s linear infinite; width:6px;height:6px; opacity:0.8; animation-delay: -4s; }
+.hero-orbit .dot-4 { animation: starCorners 8.4s linear infinite; width:9px;height:9px; opacity:0.92; animation-delay: -1s; }
+
+
+.hero-panel-glow {
+    background: radial-gradient(circle at top left, rgba(var(--accent-rgb), 0.16), transparent 60%);
+    pointer-events: none;
+}
+
 /* Hero badge */
 .hero-badge {
-    background: var(--accent-dim);
+    background: rgba(var(--accent-rgb), 0.12);
     border: 1px solid rgba(var(--accent-rgb), 0.2);
     backdrop-filter: blur(10px);
     animation: fadeUp 0.8s ease forwards;
@@ -240,14 +358,14 @@ html:not(.dark) .light-icon { display: block; }
 
 /* Hero name */
 .hero-name {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5.5vw, 3.6rem);
     line-height: 0.95;
     animation: fadeUp 0.8s ease forwards;
     opacity: 0;
 }
 .hero-name:first-child { animation-delay: 0.3s; }
 .hero-name-gradient {
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5.5vw, 3.6rem);
     line-height: 0.95;
     animation: fadeUp 0.8s ease forwards;
     animation-delay: 0.45s;
@@ -278,6 +396,7 @@ html:not(.dark) .light-icon { display: block; }
     animation: fadeUp 0.8s ease forwards;
     animation-delay: 0.75s;
     opacity: 0;
+    font-size: 0.95rem;
 }
 
 .hero-btns {
@@ -292,6 +411,13 @@ html:not(.dark) .light-icon { display: block; }
     opacity: 0;
 }
 
+.hero-stat-pill {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(var(--accent-rgb), 0.14);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 0.9rem;
+}
+
 .stat-divider {
     width: 1px;
     background: var(--border);
@@ -302,6 +428,7 @@ html:not(.dark) .light-icon { display: block; }
     background: var(--accent);
     color: #fff;
     transition: all 0.25s ease;
+    padding: 0.6rem 1rem;
 }
 .cta-primary:hover {
     background: var(--accent-dark);
@@ -314,6 +441,7 @@ html:not(.dark) .light-icon { display: block; }
     color: var(--fg);
     border: 1px solid var(--border);
     transition: all 0.25s ease;
+    padding: 0.6rem 1rem;
 }
 .cta-secondary:hover {
     border-color: var(--accent);
@@ -334,138 +462,8 @@ html:not(.dark) .light-icon { display: block; }
     box-shadow: 0 8px 20px var(--accent-glow);
 }
 
-/* ─── PROFILE IMAGE SHELL ───────────────────────── */
-.profile-shell {
-    width: 270px;
-    height: 270px;
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
-}
-
-@media (max-width: 375px) {
-    .profile-shell {
-        width: 230px;
-        height: 230px;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile-shell { width: 400px; height: 400px; }
-}
-
-.profile-img-wrap {
-    width: 72%;
-    height: 72%;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid rgba(var(--accent-rgb), 0.3);
-    box-shadow: 0 0 40px var(--accent-glow), inset 0 0 40px rgba(var(--accent-rgb), 0.05);
-}
-
-.profile-img-glow {
-    background: radial-gradient(ellipse at 50% 120%, rgba(var(--accent-rgb), 0.35) 0%, transparent 60%);
-    pointer-events: none;
-}
-
-.profile-img {
-    filter: contrast(1.02) brightness(1.02);
-    animation: imgFloat 6s ease-in-out infinite;
-}
-
-@keyframes imgFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-}
-
-/* Rings */
-.ring {
-    border-radius: 50%;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ring-outer {
-    width: 100%; height: 100%;
-    border: 1px solid rgba(var(--accent-rgb), 0.15);
-    animation: ringSpinSlow 25s linear infinite;
-}
-
-.ring-outer::before {
-    content: '';
-    position: absolute;
-    width: 8px; height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    top: 4px; left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 12px var(--accent);
-}
-
-.ring-outer::after {
-    content: '';
-    position: absolute;
-    width: 6px; height: 6px;
-    background: rgba(var(--accent-rgb), 0.5);
-    border-radius: 50%;
-    bottom: 4px; left: 50%;
-    transform: translateX(-50%);
-}
-
-.ring-middle {
-    width: 88%; height: 88%;
-    border: 1px dashed rgba(var(--accent-rgb), 0.2);
-    animation: ringSpinSlow 15s linear infinite reverse;
-}
-
-.ring-inner {
-    width: 80%; height: 80%;
-    border: 1px solid rgba(var(--accent-rgb), 0.1);
-}
-
-@keyframes ringSpinSlow {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Floating tech tags */
-.tech-tag {
-    background: var(--surface);
-    border: 1px solid rgba(var(--accent-rgb), 0.25);
-    color: var(--fg);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    animation: tagFloat 4s ease-in-out infinite;
-    white-space: nowrap;
-    font-size: 0.7rem;
-}
-
-.tech-tag-1 { top: 10%; left: -10%; animation-delay: 0s; }
-.tech-tag-2 { top: 15%; right: -8%; animation-delay: 1s; }
-.tech-tag-3 { bottom: 20%; left: -12%; animation-delay: 2s; }
-.tech-tag-4 { bottom: 15%; right: -10%; animation-delay: 1.5s; }
-
-@media (max-width: 768px) {
-    .tech-tag-1 { left: -5%; }
-    .tech-tag-2 { right: -5%; }
-    .tech-tag-3 { left: -5%; }
-    .tech-tag-4 { right: -5%; }
-}
-
-@keyframes tagFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-/* Corner accent dots */
-.corner-dot {
-    background: var(--accent);
-    box-shadow: 0 0 8px var(--accent);
-}
-.corner-dot-1 { top: 8%; left: 8%; }
-.corner-dot-2 { bottom: 8%; right: 8%; }
-.corner-dot-3 { top: 30%; right: 3%; width: 6px; height: 6px; opacity: 0.5; }
+/* Profile visuals removed (single-column hero) */
+/* The profile, rings and tech-tag styles were removed because the hero now shows a centered info panel. */
 
 /* Scroll indicator */
 .scroll-indicator { opacity: 0.5; }
