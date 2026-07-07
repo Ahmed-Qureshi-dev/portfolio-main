@@ -440,18 +440,22 @@
     <img src="/me.png" alt="Ahmed Qureshi - AI-Augmented Technical Generalist" style="display:none;" loading="eager">
 
     <!-- Preloader -->
-    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center">
-        <div class="preloader-inner flex flex-col items-center gap-6">
-            <div class="relative w-20 h-20">
-                <svg class="w-20 h-20 animate-spin" viewBox="0 0 80 80">
-                    <circle cx="40" cy="40" r="36" fill="none" stroke-width="2" stroke="rgba(var(--accent-rgb),0.15)"/>
-                    <circle cx="40" cy="40" r="36" fill="none" stroke-width="2" stroke="var(--accent)" stroke-dasharray="60 167" stroke-linecap="round"/>
+    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[rgba(15,23,24,0.92)] backdrop-blur-sm">
+        <div class="preloader-card flex flex-col items-center gap-4 rounded-[28px] border border-[rgba(var(--accent-rgb),0.12)] bg-[rgba(var(--surface-rgb),0.92)] p-5 shadow-[0_35px_90px_rgba(0,0,0,0.2)]">
+            <div class="loader-ring relative w-20 h-20">
+                <svg class="w-full h-full" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(var(--accent-rgb),0.14)" stroke-width="2"/>
+                    <circle class="loader-ring-track" cx="40" cy="40" r="34" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-dasharray="52 160"/>
                 </svg>
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="font-display font-bold text-lg" style="color:var(--accent)">AQ</span>
+                    <span class="font-display font-bold text-xl" style="color:var(--accent)">AQ</span>
                 </div>
             </div>
-            <p class="text-xs tracking-[0.4em] uppercase font-display" style="color:var(--muted)">Initializing...</p>
+            <div class="text-center">
+                <p class="text-[0.65rem] tracking-[0.45em] uppercase" style="color:var(--accent)">Loading</p>
+                <h2 class="font-display text-xl font-semibold" style="color:var(--fg)">Ahmed Qureshi</h2>
+                <p class="text-[0.75rem] uppercase tracking-[0.18em]" style="color:var(--muted)">Preparing your digital experience</p>
+            </div>
         </div>
     </div>
 
