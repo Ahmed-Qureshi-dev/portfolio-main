@@ -117,7 +117,7 @@
     <meta name="copyright" content="© 2026 Ahmed Qureshi. All rights reserved.">
     <meta name="robots" content="index, follow">
     <meta name="rating" content="General">
-    <meta name="theme-color" content="#0a0f1e">
+    <meta name="theme-color" content="#1b2d31">
     <link rel="canonical" href="https://ahmed-qureshi-three.vercel.app/projects.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Projects | Ahmed Qureshi — AI-Augmented Technical Generalist">
@@ -275,7 +275,7 @@
         }
 
         .grad-text {
-            background: linear-gradient(135deg, var(--accent), #8b5cf6);
+            background: linear-gradient(135deg, var(--accent), #42a69b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -296,6 +296,137 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: rgba(var(--primary-rgb), 0.3); border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: rgba(var(--primary-rgb), 0.6); }
+
+        @media (max-width: 768px) {
+            body > section.relative.pt-40 {
+                padding-top: calc(var(--header-h) + 2.25rem) !important;
+                padding-bottom: 2.75rem !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            body > section.relative.pt-40 h1 {
+                font-size: clamp(2.65rem, 13vw, 3.65rem) !important;
+                line-height: 0.98;
+                margin-bottom: 1rem !important;
+            }
+
+            body > section.relative.pt-40 p {
+                font-size: 1rem !important;
+                line-height: 1.65;
+            }
+
+            body > section.relative.pt-40 .flex.flex-wrap.justify-center.gap-8 {
+                display: grid !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 0.55rem !important;
+                margin-top: 1.75rem !important;
+            }
+
+            body > section.relative.pt-40 .flex.flex-wrap.justify-center.gap-8 > div {
+                min-width: 0;
+                padding: 0.85rem 0.45rem;
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                background: rgba(255,255,255,0.04);
+            }
+
+            body > section.relative.pt-40 .flex.flex-wrap.justify-center.gap-8 > div p:first-child {
+                font-size: clamp(1.1rem, 5vw, 1.45rem) !important;
+                line-height: 1.05;
+            }
+
+            body > section.relative.pt-40 .flex.flex-wrap.justify-center.gap-8 > div p:last-child {
+                font-size: 0.58rem !important;
+                letter-spacing: 0.08em;
+            }
+
+            body > section.relative.pt-40 .w-px {
+                display: none !important;
+            }
+
+            main {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                padding-top: 1rem !important;
+            }
+
+            main > .flex.justify-center {
+                justify-content: stretch !important;
+            }
+
+            main > .flex.justify-center > div {
+                width: 100%;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem !important;
+                padding: 0.65rem !important;
+                border-radius: 16px !important;
+            }
+
+            .filter-btn {
+                width: 100%;
+                min-height: 2.35rem;
+                padding: 0.55rem 0.7rem !important;
+                line-height: 1.15;
+                white-space: normal;
+            }
+
+            #projects-grid {
+                gap: 1rem !important;
+            }
+
+            .project-card-wrap {
+                border-radius: 16px;
+            }
+
+            .card-img-wrap {
+                height: 11.5rem;
+            }
+
+            .project-card-wrap .p-6 {
+                padding: 1.15rem !important;
+            }
+
+            .project-card-wrap h3 {
+                font-size: 1.1rem !important;
+                line-height: 1.25;
+            }
+
+            .project-card-wrap p {
+                font-size: 0.9rem !important;
+                line-height: 1.55;
+            }
+
+            .project-card-wrap .flex.flex-wrap.gap-2 span {
+                font-size: 0.62rem !important;
+                line-height: 1.2;
+                padding: 0.25rem 0.45rem !important;
+            }
+
+            .browser-bar {
+                height: 24px;
+                padding: 0 0.55rem;
+            }
+
+            .url-pill {
+                margin: 0 0.35rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            body > section.relative.pt-40 .flex.flex-wrap.justify-center.gap-8 {
+                grid-template-columns: 1fr;
+            }
+
+            main > .flex.justify-center > div {
+                grid-template-columns: 1fr;
+            }
+
+            .card-img-wrap {
+                height: 10.75rem;
+            }
+        }
     </style>
 
     <!-- ═══════════════════════════════════════════

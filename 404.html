@@ -6,6 +6,7 @@
     <title>404 - Page Not Found | Ahmed Qureshi</title>
     <meta name="description" content="Oops! The page you're looking for doesn't exist. Return to Ahmed Qureshi's portfolio.">
     <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#1b2d31">
     <style>
         * {
             margin: 0;
@@ -14,8 +15,11 @@
         }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #fff;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(66, 166, 155, 0.18), transparent 30rem),
+                radial-gradient(circle at 92% 0%, rgba(217, 164, 65, 0.14), transparent 28rem),
+                linear-gradient(135deg, #0f1718 0%, #162628 42%, #211a17 100%);
+            color: #f7f1e3;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -25,12 +29,16 @@
             text-align: center;
             padding: 40px;
             max-width: 600px;
+            border: 1px solid rgba(230, 214, 176, 0.16);
+            border-radius: 18px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)), #172426;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
         }
         h1 {
             font-size: 120px;
             font-weight: 700;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            background: linear-gradient(135deg, #d9a441, #42a69b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -39,21 +47,21 @@
             font-size: 48px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #ff6b6b;
+            color: #d9a441;
         }
         p {
             font-size: 18px;
-            color: #ccc;
+            color: #b5c6c0;
             margin-bottom: 30px;
             line-height: 1.6;
         }
         a {
             display: inline-block;
             padding: 12px 30px;
-            background: linear-gradient(135deg, #00d4ff, #0099ff);
-            color: #000;
+            background: #d9a441;
+            color: #0f1718;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             font-weight: 600;
             transition: all 0.3s ease;
             margin: 10px;
@@ -61,15 +69,57 @@
         
         a:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 10px 24px rgba(217, 164, 65, 0.3);
         }
         .secondary-link {
             background: transparent;
-            border: 2px solid #00d4ff;
-            color: #00d4ff;
+            border: 2px solid #d9a441;
+            color: #d9a441;
         }
         .secondary-link:hover {
-            background: rgba(0, 212, 255, 0.1);
+            background: rgba(217, 164, 65, 0.1);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                align-items: stretch;
+                padding: 16px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: none;
+                min-height: calc(100svh - 32px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 28px 18px;
+                border-radius: 18px;
+            }
+
+            h1 {
+                font-size: clamp(70px, 24vw, 104px);
+                line-height: 0.95;
+                margin-bottom: 14px;
+            }
+
+            .error-code {
+                font-size: clamp(32px, 12vw, 48px);
+                margin-bottom: 12px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.65;
+                margin-bottom: 22px;
+            }
+
+            a {
+                width: 100%;
+                margin: 6px 0;
+                padding: 13px 18px;
+                border-radius: 12px;
+            }
         }
     </style>
 </head>
