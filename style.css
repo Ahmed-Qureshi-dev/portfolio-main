@@ -407,18 +407,33 @@ section#home { height: 100vh; box-sizing: border-box; display: flex; align-items
     -webkit-text-fill-color: transparent;
 }
 .hero-subtitle {
-    min-height: 1.4rem;
-    display: inline-block;
+    min-height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    min-width: 18ch;
+    max-width: 100%;
+    overflow: hidden;
     position: relative;
     letter-spacing: 0.18em;
 }
-.hero-subtitle::after {
+.subtitle-prefix {
+    opacity: 0.8;
+    letter-spacing: 0.2em;
+}
+.typewriter-text {
+    display: inline-block;
+    min-width: 16ch;
+    max-width: 100%;
+    line-height: 1.2;
+}
+.typewriter-text::after {
     content: '';
-    position: absolute;
-    right: -0.2rem;
-    top: 0.1rem;
+    display: inline-block;
     width: 0.14rem;
-    height: 1.05em;
+    height: 1.1em;
+    margin-left: 0.25rem;
     background: var(--accent);
     animation: blink 1s steps(2, start) infinite;
 }

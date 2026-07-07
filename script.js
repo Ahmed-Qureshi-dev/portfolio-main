@@ -170,26 +170,26 @@ function initTypewriter() {
         if (isDeleting) {
             el.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
-            typeSpeed = 35;
+            typeSpeed = 45;
         } else {
             el.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
-            typeSpeed = 80;
+            typeSpeed = 90;
         }
 
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
-            typeSpeed = 2200;
+            typeSpeed = 1600;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 350;
+            typeSpeed = 500;
         }
 
         setTimeout(type, typeSpeed);
     }
 
-    setTimeout(type, 1200);
+    setTimeout(type, 900);
 }
 
 // ─── SPOTLIGHT EFFECT ─────────────────────────────
